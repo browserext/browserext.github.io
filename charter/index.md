@@ -47,12 +47,13 @@ user permissions to use device features.
 
 ## Communication
 
-This group primarily will conduct its work
-on the [public-browserext@w3.org](mailto:public-browserext@w3.org) mailing list
+This group will conduct all of its technical work publicly,
+primarily using the [public-browserext@w3.org](mailto:public-browserext@w3.org) mailing list
 ([archives](https://lists.w3.org/Archives/Public/public-browserext/)).
 
 Teleconferences and face-to-face meetings are not held regularly,
-but may be when necessary.
+but may be occasionally when necessary,
+provided sufficient advance notice is given.
 Minutes of any such meeting
 will be posted to the group’s public mailing list
 in a timely manner.
