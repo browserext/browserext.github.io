@@ -1,0 +1,118 @@
+---
+title: Browser Extension Community Group Charter
+---
+
+This charter:
+: <a href='{{ page.url | remove: "index.html" | prepend: site.url }}'>{{ page.url | remove: "index.html" | prepend: site.url }}</a>
+
+## Scope
+
+### Success Criteria
+
+Define interoperable standards for browser extensions.
+
+## Deliverables
+
+Initially the proposal for group to work on the following standard specifications for: 
+
+- Common directory structure, packaging, manifest, file extension
+- Browser API and communication mechanisms (i.e. Local data storage)
+- Native Platform (i.e. Operating System, Device etc.) communication APIs
+- Secure distribution approach (Public / Private app/extension stores)
+- Communication between pages / tabs etc.
+
+## Dependencies and Liaisons
+
+### W3C Groups
+
+[Web Applications Working Group](http://www.w3.org/2008/webapps/)
+: One of the areas of collaboration 
+cross-site resource sharing deliverable
+as joint work with the Web Applications Working Group.
+
+[HTML Working Group](http://www.w3.org/html/wg/)
+: The [HTML5](http://www.w3.org/TR/html5/) specification
+defines many of the security policies
+that apply in the current browser environment.
+
+[Device API Working Group](http://www.w3.org/2009/dap/)
+: The Device API Working Group's deliverables
+include an API for requesting and managing
+user permissions to use device features.
+
+## Communication
+
+This group primarily will conduct its work
+on the [public-browserext@w3.org](mailto:public-browserext@w3.org) mailing list
+([archives](https://lists.w3.org/Archives/Public/public-browserext/)).
+
+Teleconferences and face-to-face meetings are not held regularly,
+but may be when necessary.
+Minutes of any such meeting
+will be posted to the group’s public mailing list
+in a timely manner.
+
+Specifications and test suites produced by this Community Group
+are hosted on the group’s [Github](https://github.com/browserext). 
+
+The group uses an internal mailing list (internal-browserext@w3.org)
+for administrative purposes,
+such as organizing meetings,
+requesting commit access to Github,
+etc.
+Up-to-date information about the group
+is maintained at the Browser Extension Community Group's
+[wiki on Github](https://github.com/browserext/browserext.github.io/wiki).
+
+## Decision Policy
+
+This group will seek to make decisions when there is consensus.
+The Browser Extension Community Group favor
+proposals that create the weakest objections.
+This is preferred over proposals that are supported
+by a large majority
+but that cause strong objections from a few people.
+When the Chair puts a question and observes dissent,
+after due consideration of different opinions,
+the Chair should record a decision (possibly after a vote)
+and any objections, and move on.
+
+Any resolution taken in a face-to-face meeting
+or a teleconference
+is to be considered provisional
+until 10 working days after the publication of the resolution
+in minutes sent to the group’s mailing list.
+If no objections are raised on the mailing list within that time,
+the resolution will be considered to have consensus
+as a resolution of the Community Group.
+
+When working on non contentious topics,
+and early drafts,
+Editors are trusted to make progress
+without needing an explicit resolution for every change.
+However, they should seek feedback from the Community Group
+and publish regular status updates
+via the public mailing list.
+This allows group participants to monitor progress
+without having to directly watch every repo. 
+
+## Community and Business Group Process and Patent Policy
+
+The group operates under the [Community and Business Group Process](https://www.w3.org/community/about/agreements/).
+Terms of in this charter that conflict
+with those of the Community and Business Group Process
+are void.
+
+As with other Community Groups,
+W3C seeks organizational licensing commitments
+under the [W3C Community Contributor License Agreement (CLA)](http://www.w3.org/community/about/agreements/cla/)
+(Proposals in this Community Group charter are applicable "Specification" in the CLA).
+When people request to participate
+without representing their organization’s legal interests,
+W3C will in general approve those requests for this group
+with the following understanding:
+W3C will seek and expect an organizational commitment
+under the CLA
+starting with the individual’s first request
+to make a contribution to a group deliverable.
+
