@@ -71,9 +71,8 @@ is maintained at the Browser Extension Community Group's
 
 ## Decision Policy
 
-This group will seek to make decisions when there is consensus.
-The Browser Extension Community Group favor
-proposals that create the weakest objections.
+This group will seek to make decisions when there is consensus,
+and favors proposals that create the weakest objections.
 This is preferred over proposals that are supported
 by a large majority
 but that cause strong objections from a few people.
