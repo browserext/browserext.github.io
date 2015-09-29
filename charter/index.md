@@ -60,7 +60,7 @@ in a timely manner.
 Specifications and test suites produced by this Community Group
 are hosted on the group’s [Github](https://github.com/browserext). 
 
-The group uses an internal mailing list (internal-browserext@w3.org)
+The group uses an internal mailing list ([internal-browserext@w3.org](mailto:internal-browserext@w3.org))
 for administrative purposes,
 such as organizing meetings,
 requesting commit access to Github,
