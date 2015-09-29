@@ -1,0 +1,19 @@
+# Site settings
+title: Browser Extension Community Group
+url: "https://browserext.github.io"
+
+# Build settings
+markdown: kramdown
+
+exclude:
+        - Gemfile
+        - Gemfile.lock
+        - README.md
+#defaults
+defaults:
+        -
+                scope:
+                        type: "pages"
+                values:
+                        layout: "default"
+
