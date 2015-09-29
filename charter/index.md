@@ -2,6 +2,8 @@
 title: Browser Extension Community Group Charter
 ---
 
+<div class="warn">This is a work in progress, not an active charter</div>
+
 This charter:
 : <a href='{{ page.url | remove: "index.html" | prepend: site.url }}'>{{ page.url | remove: "index.html" | prepend: site.url }}</a>
 

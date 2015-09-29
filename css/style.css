@@ -2,3 +2,12 @@ body {
 	max-width: 50em;
 	margin: auto;
 }
+
+.warn {
+	border: solid red 5px;
+	padding: 1em;
+	background: #ffaaaa;
+}
+.warn::before {
+	content: "WARNING: ";
+}
