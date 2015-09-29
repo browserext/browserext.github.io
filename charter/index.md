@@ -41,7 +41,7 @@ defines many of the security policies
 that apply in the current browser environment.
 
 [Device API Working Group](http://www.w3.org/2009/dap/)
-: The Device API Working Group's deliverables
+: The Device API Working Group’s deliverables
 include an API for requesting and managing
 user permissions to use device features.
 
@@ -67,7 +67,7 @@ such as organizing meetings,
 requesting commit access to Github,
 etc.
 Up-to-date information about the group
-is maintained at the Browser Extension Community Group's
+is maintained at the Browser Extension Community Group’s
 [wiki on Github](https://github.com/browserext/browserext.github.io/wiki).
 
 ## Decision Policy
@@ -163,5 +163,5 @@ may take any action including no action.
 ## Amendments to this Charter
 
 This Charter can be amended by the Chairs with consultation of the Community Group,
-if the change is agreed to by W3C's Community Development Lead
+if the change is agreed to by W3C’s Community Development Lead
 (Community Development Lead is described in the CG Process).
