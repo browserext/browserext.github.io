@@ -7,6 +7,9 @@ title: Browser Extension Community Group Charter
 This charter:
 : <a href='{{ page.url | remove: "index.html" | prepend: site.url }}'>{{ page.url | remove: "index.html" | prepend: site.url }}</a>
 
+Feedback about this document:
+: [Github issues](https://github.com/browserext/browserext.github.io/issues)
+
 ## Scope
 
 ### Success Criteria
