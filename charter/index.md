@@ -158,3 +158,9 @@ may ask the Community Development Lead to intervene.
 The Community Development Lead,
 after evaluating the election,
 may take any action including no action. 
+
+## Amendments to this Charter
+
+This Charter can be amended by the Chairs with consultation of the Community Group,
+if the change is agreed to by W3C's Community Development Lead
+(Community Development Lead is described in the CG Process).
