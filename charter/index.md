@@ -10,11 +10,35 @@ This charter:
 Feedback about this document:
 : [Github issues](https://github.com/browserext/browserext.github.io/issues)
 
+## Goal
+
+This Community Group provides a lightweight venue to facilitate discussion
+between Web Browser vendors,
+as well as other interested parties,
+in order to establish a set of standards
+for interoperable browser extensions.
+
+Several browser vendors have already started converging
+towards a common approach,
+based on the model and APIs
+initially developped by Google for Chrome.
+This Community Group aims at ensuring
+actual interoperability rather than mere similarity.
+
+As the specifications developed in the Community Group mature
+and as Browser Vendors confirm intent to implement them,
+it is expected that these specifications
+will be migrated to the appropirate W3C Working Group
+where they can be put on the Recommendation track
+with appropriate status and Intellectual Property (IP) considerations.
+
+When existing specifications already worked on in other groups
+cover topics needed for interoperable browser extensions,
+this group will gather use cases and requirements
+to inform the design of these specifications,
+and communicate them to the relevant group.
+
 ## Scope
-
-### Success Criteria
-
-Define interoperable standards for browser extensions.
 
 ## Deliverables
 
