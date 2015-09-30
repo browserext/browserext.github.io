@@ -40,6 +40,27 @@ and communicate them to the relevant group.
 
 ## Scope
 
+1. Specifying the APIs,
+execution model and security model
+that form the basis of the cross browser exentions.
+Existing end-user documentation,
+as provided by [Google](https://developer.chrome.com/extensions),
+[Opera](https://dev.opera.com/extensions/),
+or [Mozilla](https://wiki.mozilla.org/WebExtensions)
+give a good indication of what is needed.
+
+2. Specify other APIs on top of that common core
+to offer additional functionality.
+
+3. To minimize repackaging overhead for authors,
+and so that extensions can actually run in any (standards compliant) browser,
+even if the author overlooked some of them,
+consider specifying:
+    * packaging format
+    * manifest format
+    * file extension
+    * mime type
+
 ## Deliverables
 
 This group will develop specifications,
