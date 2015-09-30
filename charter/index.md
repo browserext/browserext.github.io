@@ -42,13 +42,17 @@ and communicate them to the relevant group.
 
 ## Deliverables
 
-Initially the proposal for group to work on the following standard specifications for: 
+This group will develop specifications,
+possibly supported by test suites,
+and my also write notes.
+The exact list of documents that need to be written
+to achieve the group's goals is not fully determined
+at the time of writing this charter,
+and will be one of the first work items
+of this Community group.
 
-- Common directory structure, packaging, manifest, file extension
-- Browser API and communication mechanisms (i.e. Local data storage)
-- Native Platform (i.e. Operating System, Device etc.) communication APIs
-- Secure distribution approach (Public / Private app/extension stores)
-- Communication between pages / tabs etc.
+This group maintains an [index]({{ "/work_items/" | prepend: site.url }})
+of the documents it is working on.
 
 ## Dependencies and Liaisons
 
