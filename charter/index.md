@@ -22,7 +22,7 @@ Several browser vendors have already started converging
 towards a common approach,
 based on the model and APIs
 initially developped by Google for Chrome.
-This Community Group aims at ensuring
+This Community Group aims to ensure
 actual interoperability rather than mere similarity.
 
 As the specifications developed in the Community Group mature
