@@ -44,7 +44,7 @@ and communicate them to the relevant group.
 
 This group will develop specifications,
 possibly supported by test suites,
-and my also write notes.
+and may also write notes.
 The exact list of documents that need to be written
 to achieve the group's goals is not fully determined
 at the time of writing this charter,
