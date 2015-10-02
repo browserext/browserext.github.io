@@ -10,7 +10,7 @@ title: Documents maintained by the Browser Extension Community Group
 
 ## Proposed documents
 - Common directory structure, packaging, manifest, file extension
-- Browser API and communication mechanisms (i.e. Local data storage)
+- Browser API, communication mechanisms (i.e. Local data storage) and security model
 - Native Platform (i.e. Operating System, Device etc.) communication APIs
 - Secure distribution approach (Public / Private app/extension stores)
 - Communication between pages / tabs etc.
