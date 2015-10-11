@@ -101,14 +101,19 @@ user permissions to use device features.
 
 This group will conduct all of its technical work publicly,
 primarily using the [public-browserext@w3.org](mailto:public-browserext@w3.org) mailing list
-([archives](https://lists.w3.org/Archives/Public/public-browserext/)).
+([archives](https://lists.w3.org/Archives/Public/public-browserext/))
+for high level discussions,
+and github for technical contributions
+(See [Contribution Mechanics](#contribution-mechanics)).
 
 Teleconferences and face-to-face meetings are not held regularly,
 but may be occasionally when necessary,
 provided sufficient advance notice is given.
 Minutes of any such meeting
 will be posted to the group’s public mailing list
-in a timely manner.
+in a timely manner,
+and any resolution will be recorded in github
+(See [Decision Policy](#decision-policy)).
 
 Specifications, notes, and test suites produced by this Community Group
 are hosted on the group’s [Github](https://github.com/browserext). 
@@ -136,10 +141,10 @@ and any objections, and move on.
 
 Any resolution taken in a face-to-face meeting
 or a teleconference
+will be recorded in the relevant specification’s github issue list, and
 is to be considered provisional
-until 10 working days after the publication of the resolution
-in minutes sent to the group’s mailing list.
-If no objections are raised on the mailing list within that time,
+until 10 working days after publication.
+If no objections are raised on within that time,
 the resolution will be considered to have consensus
 as a resolution of the Community Group.
 
@@ -172,6 +177,31 @@ W3C will seek and expect an organizational commitment
 under the CLA
 starting with the individual’s first request
 to make a contribution to a group deliverable.
+The section on [Contribution Mechanics](#contribution-mechanics) describes how
+W3C expects to monitor these contribution requests.
+
+##Contribution Mechanics
+
+Community Group participants agree to make contributions
+in the GitHub repo for the project that they are interested in.
+This may be in the form of a pull request (preferred),
+by raising an issue,
+or by adding a comment to an existing issue.
+
+The Community Group mailing list must not be used
+for discussing details of specific projects.
+
+Specifications created for proposals in the Community Group
+must use the [W3C Software and Document License](http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
+
+All Github repositories attached to the Community Group
+must contain a copy of the
+[CONTRIBUTING](https://github.com/browserext/browserext.github.io/blob/master/CONTRIBUTING.md)
+and
+[LICENSE](https://github.com/browserext/browserext.github.io/blob/master/license.md)
+files.
+
+Note: this CG will not use a contrib mailing list for contributions since all contributions will be tracked via Github mechanisms (e.g. pull requests).
 
 ## Chair Selection
 
