@@ -110,7 +110,7 @@ Minutes of any such meeting
 will be posted to the group’s public mailing list
 in a timely manner.
 
-Specifications and test suites produced by this Community Group
+Specifications, notes, and test suites produced by this Community Group
 are hosted on the group’s [Github](https://github.com/browserext). 
 
 The group uses an internal mailing list ([internal-browserext@w3.org](mailto:internal-browserext@w3.org))
