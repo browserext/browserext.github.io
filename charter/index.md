@@ -72,6 +72,9 @@ at the time of writing this charter,
 and will be one of the first work items
 of this Community group.
 
+All deliverables of this Community Group will use
+the [W3C Software and Document License](http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
+
 This group maintains an [index]({{ "/work_items/" | prepend: site.url }})
 of the documents it is working on.
 
