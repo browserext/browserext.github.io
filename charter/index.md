@@ -143,7 +143,7 @@ If no objections are raised on the mailing list within that time,
 the resolution will be considered to have consensus
 as a resolution of the Community Group.
 
-When working on non contentious topics,
+When working on non contentious topics
 and early drafts,
 Editors are trusted to make progress
 without needing an explicit resolution for every change.
