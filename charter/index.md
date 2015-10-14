@@ -27,8 +27,8 @@ actual interoperability rather than mere similarity.
 
 As the specifications developed in the Community Group mature
 and as Browser Vendors confirm intent to implement them,
-it is expected that these specifications
-will be migrated to the appropirate W3C Working Group
+this community group may consider migrating them
+to the appropirate W3C Working Group
 where they can be put on the Recommendation track
 with appropriate status and Intellectual Property (IP) considerations.
 
