@@ -82,14 +82,11 @@ of the documents it is working on.
 
 ### W3C Groups
 
-[Web Applications Working Group](http://www.w3.org/2008/webapps/)
-: One of the areas of collaboration 
-cross-site resource sharing deliverable
-as joint work with the Web Applications Working Group.
-
-[HTML Working Group](http://www.w3.org/html/wg/)
-: The [HTML5](http://www.w3.org/TR/html5/) specification
-defines many of the security policies
+[Web Platform Working Group](http://www.w3.org/WebPlatform/WG/)
+: The Web Platform Working Group develops many relevant specifications,
+covering [HTML5](http://www.w3.org/TR/html5/),
+various APIs for client-side development,
+and many of the security policies
 that apply in the current browser environment.
 
 [Device API Working Group](http://www.w3.org/2009/dap/)
