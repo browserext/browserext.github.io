@@ -60,6 +60,7 @@ consider specifying:
     * manifest format
     * file extension
     * mime type
+    * deployment mechanisms
 
 ## Deliverables
 
