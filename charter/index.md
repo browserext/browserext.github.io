@@ -95,6 +95,12 @@ that apply in the current browser environment.
 include an API for requesting and managing
 user permissions to use device features.
 
+[Web Application Security Working Group](http://www.w3.org/2011/webappsec/)
+[Technical Architecture Group](http://www.w3.org/2001/tag/)
+: Both groups should be consulted by this Community Group
+to ensure that security aspects of the specifications developed
+have been properly considered and addressed.
+
 ## Communication
 
 This group will conduct all of its technical work publicly,
