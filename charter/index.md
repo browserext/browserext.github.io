@@ -184,7 +184,7 @@ to make a contribution to a group deliverable.
 The section on [Contribution Mechanics](#contribution-mechanics) describes how
 W3C expects to monitor these contribution requests.
 
-##Contribution Mechanics
+## Contribution Mechanics
 
 Community Group participants agree to make contributions
 in the GitHub repo for the project that they are interested in.
