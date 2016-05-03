@@ -5,6 +5,8 @@ title: Documents maintained by the Browser Extension Community Group
 ## Actively developed documents
 
 ### Specifications
+* [The base specification for browser extensions](http://browserext.github.io/browserext/), indented to cover the essential APIs, manifest format, packaging format, and the execution / security model
+
 
 ### Notes
 
