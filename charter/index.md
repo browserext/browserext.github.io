@@ -192,8 +192,8 @@ This may be in the form of a pull request (preferred),
 by raising an issue,
 or by adding a comment to an existing issue.
 
-The Community Group mailing list must not be used
-for discussing details of specific projects.
+**The Community Group mailing list must not be used
+for discussing details of specific projects.**
 
 Specifications created for proposals in the Community Group
 must use the [W3C Software and Document License](http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document).
