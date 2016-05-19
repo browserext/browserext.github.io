@@ -19,11 +19,12 @@ body {
 a.self-link {
 	text-decoration: none;
 }
-a.self-link:visited {
-	color: unset;
+a.self-link {
+	color: currentColor;
 }
 a.self-link:hover::before {
 	float: left;
-	margin-left: -1em;
+	margin-left: -1.5rem;
+	font-size: 1.2rem;
 	content: "§";
 }
