@@ -5,6 +5,9 @@ url: "https://browserext.github.io"
 # Build settings
 markdown: kramdown
 
+collections:
+        minutes:
+                output: true
 exclude:
         - Gemfile
         - Gemfile.lock
@@ -18,3 +21,9 @@ defaults:
                 values:
                         layout: "default"
 
+        -
+                scope:
+                        path: ""
+                        type: minutes
+                values:
+                        layout: "default"

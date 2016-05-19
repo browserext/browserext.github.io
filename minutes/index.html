@@ -1,0 +1,15 @@
+---
+title: Minutes of Meetings and Teleconferences
+---
+
+{% for m in site.minutes reversed %}
+{% assign currentdate = m.date | date: "%B %Y" %}
+{% if currentdate != date %}
+{% unless forloop.first %}</ul>{% endunless %}
+<h2 id="{{m.date | date: "%Y-%m"}}"><a class=self-link href="#{{m.date | date: "%Y-%m"}}">{{ currentdate }}</a></h2>
+<ul>
+{% assign date = currentdate %}
+{% endif %}
+	<li><a href="{{ m.url }}">{{ m.title }}</a></li>
+{% if forloop.last %}</ul>{% endif %}
+{% endfor %}

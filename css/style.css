@@ -15,3 +15,15 @@ body {
 .todo::before {
 	content: "TO DO: ";
 }
+
+a.self-link {
+	text-decoration: none;
+}
+a.self-link:visited {
+	color: unset;
+}
+a.self-link:hover::before {
+	float: left;
+	margin-left: -1em;
+	content: "§";
+}

@@ -113,7 +113,7 @@ and github for technical contributions
 Teleconferences and face-to-face meetings are not held regularly,
 but may be occasionally when necessary,
 provided sufficient advance notice is given.
-Minutes of any such meeting
+<a href="/minutes/">Minutes</a> of any such meeting
 will be posted to the group’s public mailing list
 in a timely manner,
 and any resolution will be recorded in github

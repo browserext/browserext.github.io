@@ -9,10 +9,10 @@ if ARGV.size != 2 || ARGV[0] == "--help" || ARGV[0] == "-h"
 	STDERR.puts "into the format suitable for inclusion in the browserext repos"
 	STDERR.puts ""
 	STDERR.puts "Syntax:"
-	STDERR.puts "\tminutes_cleaner.rb <input_file_or_url> <output_file>"
+	STDERR.puts "\tminutes_cleaner.rb <input_file_or_url> <date>"
 	STDERR.puts ""
 	STDERR.puts "Example:"
-	STDERR.puts "\tscripts/minutes_cleaner.rb https://www.w3.org/2042/01/25-browserext-minutes.html minutes/2042-01-25.md"
+	STDERR.puts "\tscripts/minutes_cleaner.rb https://www.w3.org/2042/01/25-browserext-minutes.html 2042-01-25"
 
 
 	exit 1
@@ -28,9 +28,10 @@ end
 @doc.css("p:empty").remove
 @doc.css("hr:last-of-type").remove
 
-File.open(ARGV[1], "w") do |f_out|
+File.open("#{__dir__}/../_minutes/#{ARGV[1]}.html", "w") do |f_out|
 	f_out.puts "---"
 	f_out.puts "title: #{@doc.css("title").inner_text.sub('--','—')}"
+	f_out.puts "date: #{ARGV[1]}"
 	f_out.puts "---"
 	f_out.puts "<div class='todo'>Review and clean up the minutes, then remove this message.</div>"
 	f_out.puts "<div class='todo'>Make Resolutions and Actions link to github issues, then remove this message.</div>"
