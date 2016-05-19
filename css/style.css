@@ -3,11 +3,15 @@ body {
 	margin: auto;
 }
 
-.warn {
+.warn, .todo {
 	border: solid red 5px;
 	padding: 1em;
 	background: #ffaaaa;
 }
 .warn::before {
 	content: "WARNING: ";
+}
+
+.todo::before {
+	content: "TO DO: ";
 }
