@@ -2,7 +2,6 @@
 title: Browser Extension Community Group
 url: "https://browserext.github.io"
 
-# Build settings
 markdown: kramdown
 
 collections:
@@ -13,7 +12,7 @@ exclude:
         - Gemfile.lock
         - README.md
         - scripts
-#defaults
+
 defaults:
         -
                 scope:
