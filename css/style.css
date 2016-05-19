@@ -32,3 +32,13 @@ a.self-link:hover::before {
 	font-size: 1.2rem;
 	content: "§";
 }
+
+dt {
+	margin-top: 1em;
+}
+dt+dd,
+dd+dd {
+	column-break-before: avoid;
+	page-break-before: avoid;
+	break-before: avoid;
+}
