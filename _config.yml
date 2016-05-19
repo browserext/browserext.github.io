@@ -4,6 +4,9 @@ url: "https://browserext.github.io"
 
 markdown: kramdown
 
+gems:
+        - jekyll-sitemap
+
 collections:
         minutes:
                 output: true
