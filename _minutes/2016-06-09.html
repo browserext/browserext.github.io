@@ -1,0 +1,314 @@
+---
+title: Browser Extension CG ad-hoc teleconf — 09 Jun 2016
+date: 2016-06-09
+---
+
+  <p>See also: <a href="http://www.w3.org/2016/06/09-browserext-irc">IRC log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Andrey Rybka (andrey-r), Kris Maglione (kmag), Mike Pietraszak (mikepie), Florian Rivoal (Florian)</dd>
+
+      <dt>Regrets</dt>
+
+      <dt>Chair</dt>
+
+      <dd>Florian</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Florian</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">WebIDL conventions</a></li>
+
+        <li><a href="#item02">Top level object name and protocol
+        name</a></li>
+
+        <li><a href="#item03">How to identify
+        functions/properties/events under the objects we've
+        identified</a></li>
+
+        <li><a href="#item04">TPAC</a></li>
+
+        <li><a href="#item05">next meeting</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+
+    <li><a href="#ResolutionSummary">Summary of
+    Resolutions</a></li>
+  </ul>
+  <hr>
+
+  <div class="meeting">
+    
+    <p class="irc">&lt;<cite>Florian</cite>&gt; Scribenick:
+    Florian</p>
+
+    <h3 id="item01">WebIDL conventions</h3>
+
+    <p class="irc">&lt;<cite>kmag</cite>&gt; <a href="https://gist.github.com/97fa5b3cf4599df92ee5066bde47c162">https://gist.github.com/97fa5b3cf4599df92ee5066bde47c162</a></p>
+
+    <p class="phone"><cite>kmag:</cite> This link is what I plan to
+    send<br>
+    ... there's basicaly to options:<br>
+    ... one use the CheckAnyPermissions attribute, and one that
+    breaks it down and specifies it in words</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; The IDL looks
+    good</p>
+
+    <p class="phone"><cite>kmag:</cite> I can walk you through
+    this</p>
+
+    <p class="phone"><cite>mikepie:</cite> Please do</p>
+
+    <p class="phone"><cite>kmag:</cite> There's a top level
+    interface call ExtensionGlobal<br>
+    ... it has one property, "browser"<br>
+    ... [... describes the content of the mail pasted above
+    ...]</p>
+
+    <p class="phone"><cite>mikepie:</cite> I like this model a
+    lot<br>
+    ... it is a clean way to extend window.<br>
+    ... I think it would help if you could expand a bit with examples, to make it easier to understand.</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; I agree a little
+    more details would help for anyone on mailing list</p>
+
+    <p class="phone"><cite>mikepie:</cite> It can work for dynamic
+    capabilities, added during execution</p>
+
+    <p class="phone"><cite>kmag:</cite> That's the way it is done
+    in webapps for the navigator property, saying this must only be
+    exposed in certain contexts.</p>
+
+    <p class="phone"><cite>andrey-r:</cite> More details would be
+    good, or people on the mailing list will have a hard time
+    understanding.<br>
+    ... but I like the proposal.</p>
+
+    <p class="phone"><cite>Florian:</cite> Where will you send it?
+    both lists?</p>
+
+    <p class="phone"><cite>kmag:</cite> I was thinking of the WebIDL mailing list, but I can CC the browserext CG.</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; Both list would be
+    good</p>
+
+    <p class="phone"><cite>mikepie:</cite> Any thoughts about the
+    events object?</p>
+
+    <p class="phone"><cite>kmag:</cite> Would have to give a
+    different name, "tabs" is a terrible name.<br>
+    ... Maybe call it broadcaster or dispatcher or something?</p>
+
+    <p class="phone"><cite>mikepie:</cite> If we can move forward
+    with this, I can use it to write up the draft,
+    but there might be some push back, so don't want to rush into using
+    it before we got feedback.</p>
+
+    <p class="phone"><cite>kmag:</cite> The only push back could be
+    about using attributes that aren't part of the spec</p>
+
+    <h3 id="item02">Top level object name and protocol name</h3>
+
+    <p class="phone"><cite>mikepie:</cite> I can go with "browser" or
+    "navigator.extension", and prefer "browser", but Opera was
+    preferring the other one.</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; I am ok with
+    both</p>
+
+    <p class="phone"><cite>kmag:</cite> for the protocol,
+    browser-extensions:// feels too long</p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; How about
+    browser-ext:// ?</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; browser-ext:// -
+    Yes</p>
+
+    <p class="phone"><cite>Florian:</cite> is browser:// too short
+    for the protocol name?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Microsoft people
+    expressed concern about extension:// for being to short / generic.</p>
+
+    <p class="phone"><cite>Florian:</cite> browserext:// ?</p>
+
+    <p class="phone"><cite>kmag:</cite> Happy eitherway</p>
+
+    <p class="phone"><cite>mikepie:</cite> I think browserext:// is
+    good</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; agree</p>
+
+    <p class="phone"><cite>Florian:</cite> and just browser for the
+    object?</p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; And browser.* for
+    object</p>
+
+    <p class="phone"><cite>Florian:</cite> Opera proposed "nex", do
+    we want to to follow that?</p>
+
+    <p class="phone"><cite>mikepie:</cite> it does make sense, but
+    I prefer what we just said</p>
+
+    <p class="phone"><cite>kmag:</cite> I'd be ok for the top level
+    object, not the protocol</p>
+
+    <p class="phone"><cite>Florian:</cite> Seem there's no
+    objection either way, and most people prefering browser & browserext://. Should we resolve on that?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Want to loop in Shwetank</p>
+
+    <p class="phone"><cite>Florian:</cite> Sure. Resolutions during
+    meeting are provisional anway.</p>
+
+    <p class="phone"><strong class="resolution" id="resolution01"><a href="https://github.com/browserext/browserext/issues/2">RESOLUTION: use "browser" as the top level
+		    object, and browserext:// as the protocol name</a></strong></p>
+
+    <p class="phone"><cite>Florian:</cite> Do we need to register
+    that protocol?</p>
+
+    <p class="phone"><cite>mikepie:</cite> I can do
+    that</p>
+<a name="action01" id="action01"></a>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> mikepie to register browserext://
+    [recorded in <a href="https://github.com/browserext/browserext/issues/3">
+    https://github.com/browserext/browserext/issues/3</a></p>
+
+    <h3 id="item03">How to identify functions/properties/events
+    under the objects we've identified</h3>
+
+    <p class="phone"><cite>mikepie:</cite> How do we do that?
+    Should I prepare something for the next meeting?</p>
+
+    <p class="phone"><cite>Florian:</cite> Set it up as a github
+    issue, and we discuss there, and take it by phone once it's settled down somewhat?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Sounds good.</p>
+
+    <p class="phone"><cite>Florian:</cite> Once we have that and
+    the IDL, we can make a spec that looks like one</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes</p>
+
+    <h3 id="item04">TPAC</h3>
+
+    <p class="phone"><cite>Florian:</cite> What do we want to do
+    there?</p>
+
+    <p class="phone"><cite>andrey-r:</cite> Meet :)</p>
+
+    <p class="phone"><cite>Florian:</cite> I've requested a time
+    slot, on Thursday IIRC.</p>
+
+    <p class="phone"><cite>mikepie:</cite> First time for CGs to
+    meet at TPAC right?</p>
+
+    <p class="phone"><cite>Florian:</cite> Yes</p>
+
+    <p class="phone"><cite>mikepie:</cite> Should we try and have a
+    more complete spec to review?</p>
+
+    <p class="phone"><cite>andrey-r:</cite> Yes, hard to be
+    productive otherwise.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Should native messaging
+    be together?</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; Native messaging
+    is very important topic</p>
+
+    <p class="phone"><cite>Florian:</cite> We can only book for the
+    CG, not per topic, so it will have to be together anyway.</p>
+
+    <p class="phone"><cite>andrey-r:</cite> Is this going to be
+    madness again, with stickers on the board?</p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; Sorry</p>
+
+    <p class="phone"><cite>Florian:</cite> Madness is the Wednesday
+    "unconference". CG meetings are different, we should get a sane time slot.<br>
+    ... I'll follow up</p>
+<a name="action02" id="action02"></a>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> florian to check if we got the time
+    slot requested [recorded in <a href="https://github.com/browserext/browserext.github.io/issues/8">
+    https://github.com/browserext/browserext.github.io/issues/8</a></p>
+
+    <p class="irc">&lt;<cite>andrey-r</cite>&gt; I was saying that
+    I would prefer to meet as early as possible, but if thursday is
+    best for most that's fine</p>
+
+    <p class="phone"><cite>Florian:</cite> Houdini shows that you
+    can have productive meetings for high level discussions, but in
+    our case having concrete things to discuss would indeed be
+    better, so let's try to have a draft spec.</p>
+
+    <h3 id="item05">next meeting</h3>
+
+    <p class="phone"><cite>Florian:</cite> It would be good to have
+    topics ahead of time, please file github issues or ML
+    threads.</p>
+
+    <p class="phone"><cite>mikepie:</cite> When do we meet next</p>
+
+    <p class="phone"><cite>andrey-r:</cite> Anytime!</p>
+
+    <p class="phone"><cite>Florian:</cite> Not next week, but
+    anytime is generally OK.</p>
+
+    <p class="phone"><cite>mikepie:</cite> June 29, same time?</p>
+
+    <p class="phone"><strong class="resolution" id="resolution02"><a href="https://github.com/browserext/browserext.github.io/issues/9">RESOLUTION: next meeting June 29, same time</a></strong></p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2>
+<!-- Action Items -->
+  <strong>[NEW]</strong> <strong>ACTION:</strong> florian to check
+  if we got the time slot requested [recorded in <a href="http://www.w3.org/2016/06/09-browserext-minutes.html#action02">http://www.w3.org/2016/06/09-browserext-minutes.html#action02</a>]<br>
+
+  <strong>[NEW]</strong> <strong>ACTION:</strong> mikepie to
+  register browserext:// [recorded in <a href="http://www.w3.org/2016/06/09-browserext-minutes.html#action01">http://www.w3.org/2016/06/09-browserext-minutes.html#action01</a>]<br>
+
+   <br>
+
+  <h2><a name="ResolutionSummary" id="ResolutionSummary">Summary of
+  Resolutions</a></h2>
+<!-- Resolutions -->
+
+  <ol>
+    <li><a href="#resolution01">use "browser" as the top level
+    object, and browserext:// as the protocol name</a></li>
+
+    <li><a href="#resolution02">next meeting June 29, same
+    time</a></li>
+  </ol><br>
+  
+
+  
+
+  
