@@ -1,0 +1,268 @@
+---
+title: Browser Extension CG teleconf — 06 Oct 2016
+date: 2016-10-06
+---
+
+  <p><a href="https://lists.w3.org/Archives/Public/public-browserext/2016Oct/0000.html">
+  Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2016/10/06-browserext-irc">IRC log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>mikepie (Mike Pietraszak), Florian (Florian Rivoal), kmag (Kris Maglione)</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Florian</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Florian</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Agenda</a></li>
+
+        <li><a href="#item02">extended attribute</a></li>
+
+        <li><a href="#item03">Joint statement on native
+        messaging</a></li>
+
+        <li><a href="#item04">Status update on
+        https://browserext.github.io/native-messaging/</a></li>
+
+        <li><a href="#item05">standardizing IDs</a></li>
+
+        <li><a href="#item06">Logo</a></li>
+
+        <li><a href="#item07">Reviewing / resolving issues in
+        https://browserext.github.io/browserext/</a></li>
+
+        <li><a href="#item08">Community involvement</a></li>
+
+        <li><a href="#item09">meeting</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+
+    <li><a href="#ResolutionSummary">Summary of
+    Resolutions</a></li>
+  </ul>
+  <hr>
+
+  <div class="meeting">
+
+    <h3 id="item01">Agenda</h3>
+
+    <p class="phone"><cite>Florian:</cite> Anything else to add to
+    the agenda?</p>
+
+    <p class="phone"><cite>kmag:</cite> I'd like to talk about
+    standardizing IDs.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Let's talk about
+    extended attributes as well.</p>
+
+    <h3 id="item02">Extended attributes</h3>
+
+    <p class="phone"><cite>mikepie:</cite> We have some direct
+    contacts what should help get the ball rolling by lightly
+    prodding the right people.</p>
+
+    <h3 id="item03">Joint statement on native messaging</h3>
+
+    <p class="phone"><a href="https://github.com/browserext/native-messaging/wiki/Explainer:-the-need-for-native-messaging">
+    https://github.com/browserext/native-messaging/wiki/Explainer:-the-need-for-native-messaging</a></p>
+
+    <p class="phone"><cite>Florian:</cite> This is a first
+    incomplete draft of the join statement we mentioned during
+    TPAC.</p>
+
+    <p class="phone"><cite>kmag:</cite> I am not sure this is
+    really necessary.</p>
+
+    <p class="phone"><cite>Florian:</cite> Not sure either, but I
+    think it's not wrong to ping people who worry about the whole
+    web platform if we're doing something that might matter to more
+    than to just ourselves.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Looks like a good start,
+    will ping people at MS.<br>
+    ... What do we do once we have this?</p>
+
+    <p class="phone"><cite>Florian:</cite> I'll ping the TAG and
+    see what they think of it.</p>
+
+    <h3 id="item04">Status update on <a href="https://browserext.github.io/native-messaging/">https://browserext.github.io/native-messaging/</a>
+</h3>
+
+    <p class="phone"><cite>Florian:</cite> Anything to speak about
+    without aswan on the call?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Not really.</p>
+
+    <h3 id="item05">standardizing IDs</h3>
+
+    <p class="phone"><cite>Florian:</cite> Have we though about
+    using URLs (as in including a domain name in there) for IDs?
+    You'd still have to map the ID to the application, but at least
+    we'd get a clean space without too much colision problems.</p>
+
+    <p class="phone"><cite>kmag:</cite> We'd need a way to verify
+    you own the domain, and some way to associate the ID with the
+    application... Seems complicated.<br>
+    ... Maybe we could instead share our ID database from the
+    respective vendor stores and allow registration on each store, but stores would
+    check with the other stores that the ID is free.</p>
+
+    <p class="phone"><cite>Florian:</cite> Doesn't that lock us out
+    of native messaging when not using app stores for distribution?
+    Like private extensions, or enterprise distribution...</p>
+
+    <p class="phone"><cite>kmag:</cite> I think it's ok. Enterprise
+    works with its own rules anyway, and the single developer use
+    case doesn't really involve distribution, so it is ok.</p>
+
+    <p class="phone"><cite>mikepie:</cite> How about having 2 ids?
+    a shared one that is unique across stores and one that is
+    unique in your own store?<br>
+    ... I guess that doesn't help.</p>
+
+    <p class="phone"><cite>Florian:</cite> Has our various
+    companies already solved a similar problem, and can we talk to
+    the people who did that?</p>
+
+    <p class="phone"><cite>mikepie:</cite> There's globaly unique Ids,
+    which deals with avoiding collisions, but it doesn't help with
+    central registration<br>
+    ... How about : when I submit to the FF store, and it generates
+    a unique ID for me. Then I use that ID to register in the MS
+    store.</p>
+
+    <p class="phone"><cite>Florian:</cite> But that allows for
+    spoofing.</p>
+
+    <p class="phone"><cite>kmag:</cite> Only if the end user can do
+    it, so we shouldn't allow.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Can we combine that with
+    the domain name id?</p>
+
+    <p class="phone"><cite>kmag:</cite> I don't see how.</p>
+
+    <p class="phone"><cite>Florian:</cite> Should we ping crypto /
+    security / ssl / ssh / etc people? They should be more familiar
+    than us with this kind of issues.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Let's do that, I know
+    some folks.</p>
+
+    <h3 id="item06">Logo</h3>
+
+    <p class="phone"><a href="https://github.com/browserext/browserext.github.io/issues/12">https://github.com/browserext/browserext.github.io/issues/12</a></p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://mikepie1.github.io/browserext-1/LogoIdeas.png">https://mikepie1.github.io/browserext-1/LogoIdeas.png</a></p>
+
+    <p class="phone"><cite>mikepie:</cite> Number 2 is unfinished,
+    it will read ext instead of cxt.<br>
+    ... 1 and 6 may not work at small sizes</p>
+
+    <p class="phone">Florian I like 2 4 and 8</p>
+
+    <p class="phone"><cite>mikepie:</cite> 4 looks like XML.</p>
+
+    <p class="phone"><cite>kmag:</cite> I like 4 5 and 8.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'll clean up 2 4 5 and
+    8.</p>
+
+    <p class="phone"><cite>kmag:</cite> I'll also try to involve
+    our designers.</p>
+
+    <h3 id="item07">Reviewing / resolving issues in <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a>
+</h3>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://mikepie1.github.io/browserext-1/">https://mikepie1.github.io/browserext-1/</a></p>
+
+    <p class="phone"><cite>Florian:</cite> Any particular issue you
+    want feedback / discussion on?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Not sure, let's just
+    start with giving you an update:<br>
+    ... I merged the webdriver part.<br>
+    ... I also changed the naming convension, so that everything
+    starts with BrowserExt, and unified Info/etc into Details<br>
+    ... I added a script to facilitate navigating through
+    issues.<br>
+    ... so the thing I want input on is Issue 35, about some methods needing to be a POST
+    instead of a GET.<br>
+
+    <p class="phone"><cite>kmag:</cite> There are two methods that
+    need to be POST, because they have side effects:
+    “Get Browser Extension Context Menu Items”
+    and
+    “Select Browser Extension Context Menu Item”.</p>
+
+    <p class="phone"><cite>mikepie:</cite> OK. I'll be doing a new
+    iteration on this tomorrow, and then the section should be
+    ready for review.</p>
+
+    <p class="phone"><cite>Florian:</cite> Skipping the issues that
+    are TODOs to yourself, it would be nice to register the issues
+    that need discussions into github.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Will do.</p>
+
+    <p class="phone"><cite>kmag:</cite> Should we provide regex for
+    comment removal?<br>
+    ... I'll register than into github, OK?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Sounds good.</p>
+
+    <h3 id="item08">Community involvement</h3>
+
+    <p class="phone"><cite>Florian:</cite> A while back we talked
+    about trying to reach out to more people and try to get them
+    involved, to comment on the spec.<br>
+    ... As we're starting to have a spec with issues to discuss,
+    are we at that point, or would it still be a waste of time for
+    most people to come at this point?</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'd like to look at some
+    usage data to check first that we have the key APIs that people
+    will want to look at to avoid disapointing them, but other than
+    that yes, we should be able to now.<br>
+    ... I can look for extension vendors that can already use the
+    stuff we have<br>
+    ... If Andrey had some specific vendors in mind, that let's us
+    look at it from the other direction and ask them what they
+    think is missing.</p>
+
+    <h3 id="item09">Next meeting</h3>
+
+    <p class="phone"><cite>mikepie:</cite> Let's try in two
+    weeks.</p>
+
+    <p class="phone"><cite>Florian:</cite> Should we try and adjust
+    the time for aswan?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes, and for Shwetank as
+    well.</p>
+
+    <p class="phone"><cite>Florian:</cite> Let's book the same time
+    for now, and in parallel try and talk to them. We can adjust if
+    they propose something that works better.</p>
+  </div>
