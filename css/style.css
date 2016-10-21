@@ -49,3 +49,50 @@ dd+dd {
 	page-break-before: avoid;
 	break-before: avoid;
 }
+
+aside {
+	max-width: 15em;
+	margin-left: 1em;
+	clear: right;
+	float: right;
+	border-radius: 1em;
+	background: lightgray;
+	padding: 0 1em;
+	overflow: auto;
+}
+@media (max-width: 35em) {
+	aside {
+		float: none;
+		margin-left: 2em;
+		max-width: none;
+	}
+}
+aside::before {
+	margin-top: 1em;
+	content: "Side conversation";
+	font-weight: bold;
+	display: block;
+}
+h1, h2, h3 {
+	clear: both;
+}
+aside.note::before {
+	content: "Note";
+}
+aside.exit::before {
+	content: none;
+}
+.exit::after {
+	content: "Exit " attr(data-name);
+	font-style: italic;
+	text-align: right;
+	display: block;
+	margin-bottom: 1em;
+}
+.meeting::after {
+	content: "Exeunt";
+	font-style: italic;
+	text-align: right;
+	display: block;
+	margin-bottom: 1em;
+}
