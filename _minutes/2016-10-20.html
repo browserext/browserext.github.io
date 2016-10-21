@@ -1,0 +1,376 @@
+---
+title: Browser Extension CG teleconf — 20 Oct 2016
+date: 2016-10-20
+---
+
+  <p>See also: <a href="http://www.w3.org/2016/10/20-browserext-irc">IRC log</a></p>
+
+  <h2><a name="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Florian Rivoal (Florian), Mike Pietraszak (mikepie), Kris Maglione (kmag), Anders Rundgren (AndersR), Andrew Swan (aswan), Shwetank Dixit (shwetank)</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Florian</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Florian</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Joint statment</a></li>
+
+        <li><a href="#item02">https://browserext.github.io/native-messaging/</a></li>
+
+        <li><a href="#item03">Logo</a></li>
+
+        <li><a href="#item04">https://browserext.github.io/browserext/</a></li>
+
+        <li><a href="#item05">next meeting</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  </ul>
+  <hr>
+
+  <div class="meeting">
+
+    <h3 id="item01">Joint statment</h3>
+
+    <p class="phone"><cite>Florian:</cite> Where do we go from the
+    basic draft we have?</p>
+
+    <p class="phone"><cite>mikepie:</cite> I can understand from an
+    implementation perspective how these two might overlap
+    but I am not sure I understand how it helps us to raise
+    this to the TAG etc.</p>
+
+    <p class="phone"><cite>Florian:</cite> To me the idea is to
+    notify the TAG that we’re working on an area where it seems
+    that other groups have interest working on as well. We’re about
+    to do our own thing, but if a grand unifying solution should be
+    made instead, they should wake up now and kick off something,
+    otherwise, we’ll do our thing.</p>
+
+    <p class="phone"><cite>AndersR:</cite> I have tried to interest
+    the TAG in such things before, but they didn’t pay attention.
+    I’m just an individual, but if there is more people interested
+    in the topic, including large corps, maybe they’ll pay
+    attention this time.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Who was on the web
+    payment side? Erik?</p>
+
+    <p class="phone"><cite>Florian:</cite> Yes, but we haven’t
+    talked since TPAC.</p>
+
+    <p class="phone"><cite>AndersR:</cite> Someone from Google as
+    well.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I’d be curious to hear
+    about what they think. I don’t think what they’re doing
+    requires explicit native messaging,
+    even if there may be such a thing as an underlying mechanism.</p>
+
+    <p class="phone"><cite>Florian:</cite> so I suggest we keep
+    moving forward with our specs, and in parallel use that
+    statement to alert the broader community and see if we get
+    feedback.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Can we try directly
+    engage with the web payment folks first, maybe in a call,
+    before spending too much time on a formal statement?</p>
+
+    <p class="phone"><cite>Florian:</cite> Sure.</p>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>[NEW]</strong> <strong>ACTION:</strong> Florian to try and arrange a call with web payment people
+    [recorded in <a href="https://github.com/browserext/native-messaging/issues/6#issuecomment-255313904">https://github.com/browserext/native-messaging/issues/6#issuecomment-255313904</a>]</p>
+
+    <h3 id="item02"><a href="https://browserext.github.io/native-messaging/">https://browserext.github.io/native-messaging/</a></h3>
+
+    <p class="phone"><cite>aswan:</cite> Mike has done a lot of
+    work, and made an outline for the draft.<br>
+    ... Mike explained that Edge is planing to take a different
+    route from Mozilla and Chrome on some aspects, so we decided to
+    leave these parts unspecified.<br>
+    ... Where we are differing is the actual protocol between the
+    browser and the native app.<br>
+    ... The part that will be specified then is permissions, the
+    manifest, and the API that the browser exposes to the web
+    app.<br>
+    ... IPC and finding applications would be out of scope.<br>
+    ... That will simplify what the spec needs to cover.</p>
+
+    <p class="phone"><cite>Florian:</cite> So setting up the
+    environment, launching the app, etc would be non standard, but
+    talking to it would be, right?</p>
+
+    <p class="phone"><cite>aswan:</cite> Essentially.<br>
+    ... That enables more platform integration and doing things the
+    native way.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes. A way to look at
+    this is that we are standardizing the web part, but the native
+    part remains system specific.</p>
+
+    <p class="phone"><cite>Florian:</cite> We’re not trying to
+    recreate flash or NPAPI, and not trying to distribute native
+    code but to integrate with an environment that’s presumably
+    already there. So on a first approach that makes sense to
+    me.</p>
+
+    <aside>
+    <p class="phone"><cite>mikepie:</cite> I cleaned up the
+    spec and added some script, now it’s nicer.</p>
+
+    <p class="phone"><cite>Florian:</cite> I am a bit surprised
+    that ReSpec can’t solve these things for you, but if it works
+    now, fine</p>
+
+    <p class="phone"><cite>mikepie:</cite> I’ll keep digging the
+    respec doc, but for now it works</p>
+    </aside>
+
+    <p class="phone"><cite>aswan:</cite> We had a recent meeting as
+    a kick off just to established the outline, now we need to fill
+    things in.</p>
+
+    <p class="phone"><cite>Florian:</cite> Anything to discuss here
+    now?</p>
+
+    <p class="phone"><cite>aswan:</cite> First we need to fill in
+    the document, then work through issues.</p>
+
+    <p class="phone"><cite>Florian:</cite> Ideally let’s work on
+    the issues on github, and if something gets stuck we can use
+    this call.</p>
+
+    <h3 id="item03">Logo</h3>
+
+    <p class="phone"><cite>mikepie:</cite> Our twitter feed still
+    has an egg. This is embarassing.</p>
+
+    <p class="phone"><cite>Florian:</cite> Yes it is.</p>
+
+    <p class="phone"><cite>kmag:</cite> We have a community design
+    portal, that could be relevant.</p>
+
+    <p class="irc">&lt;<cite>kmag</cite>&gt; <a href="https://github.com/mozilla/OpenDesign">https://github.com/mozilla/OpenDesign</a></p>
+
+    <aside class=exit data-name="aswan">
+    <p class="irc">&lt;<cite>aswan</cite>&gt; I have another
+    meeting starting, have to drop off...</p>
+    </aside>
+
+    <p class="phone"><cite>Florian:</cite> I am skeptical of design
+    by committee.</p>
+
+    <p class="phone"><cite>kmag:</cite> It wouldn’t be that.</p>
+
+    <p class="phone"><cite>Florian:</cite> Then sure.</p>
+
+    <p class="phone"><cite>shwetank:</cite> Can we start with
+    something as a default, and improve on that as we get feedback?<br>
+    ... I like 8.</p>
+
+    <p class="phone"><cite>Florian:</cite> Is this the updated version: <a href="https://mikepie1.github.io/browserext-1/LogoIdeas.png">https://mikepie1.github.io/browserext-1/LogoIdeas.png</a></p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes.</p>
+
+    <p class="phone"><cite>Florian:</cite> Strall poll: pick your
+    favorite two, ranked.</p>
+
+    <p class="irc">&lt;<cite>kmag</cite>&gt; 8, 7</p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; 6, 5</p>
+
+    <p class="irc">&lt;<cite>Florian:</cite>&gt; 8, 5</p>
+
+    <p class="irc">&lt;<cite>shwetank</cite>&gt; 8, 9</p>
+
+    <p class="irc">&lt;<cite>AndersR</cite>&gt; 8, 9</p>
+
+    <p class="phone"><cite>Florian:</cite> It looks like an 8 to me.
+    Everybody can live with that?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Sure.</p>
+
+    <p class="phone"><cite>Florian:</cite> Mike, please send me the
+    good quality version, and I’ll use it for the twitter
+    account.</p>
+
+    <p class="phone"><cite>shwetank:</cite> Would prefer a while
+    background</p>
+
+    <p class="phone"><cite>mikepie:</cite> On Twitter you would only see the
+    shield then, not the rounded corners.</p>
+
+    <p class="phone"><cite>shwetank:</cite> Ok.</p>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> kmag to get feedback on the logo from Mozilla
+    [recorded in <a href="https://github.com/browserext/browserext.github.io/issues/12#issuecomment-255314648<Paste>">https://github.com/browserext/browserext.github.io/issues/12#issuecomment-255314648</a>]</p>
+
+    <h3 id="item04"><a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a></h3>
+
+    <p class="phone"><cite>mikepie:</cite> I’ll walk you through
+    the updates first.<br>
+    ... I have registered the URI scheme.</p>
+
+    <p class="phone"><cite>Florian:</cite> thanks</p>
+
+    <p class="phone"><cite>mikepie:</cite> Also referenced our
+    specifications with SpecRef.<br>
+    ... Also added the script I mentioned earlier to get nice
+    formatting for WebIDL.<br>
+    ... I’ve synced the issues in the spec and github.</p>
+
+    <p class="phone"><cite>Florian:</cite> Nice, thanks.</p>
+
+    <aside class="note">
+    <p>Issue numbers mentioned in this discussion are not stable,
+    and may change as the specification is updated.</p>
+    </aside>
+
+    <p class="phone"><cite>mikepie:</cite> Issue 1 and 2 and large
+    todos for myself.<br>
+    ... We talked about trying to be consistent on IDs. I would be
+    ok with not doing that, but if we should do it, doing it now
+    would be good. I’ll talk to my team<br>
+    ... Issues in green are marked as resolved. I’ll remove them
+    with the next pull request, so I’d like you to confirm that
+    they’re all OK.</p>
+
+    <p class="phone"><cite>mikepie:</cite> We removed the mention
+    of bookmarks.</p>
+
+    <p class="phone"><cite>Florian:</cite> Can do it later
+    right?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes, they are just not not part of the
+    core. Can be grafted on later.<br>
+    ... The availability of APIs is now we defined
+    in terms of the default <abbr title="Content Security Policy">CSP</abbr>, with a link to it.
+    This is issues 6, 7, and 8.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Issue 10 (github #19): I
+    had text about content scripts and immediate events and delayed
+    events, and I wasn’t quite sure what it meant anyway, so I’ve
+    removed for now.<br>
+    ... Issue 11: at tpac we had decided to remove the optional
+    permission part of the table. Now that’s done.<br>
+    ... I specified that unknown manifest keys can be ignored.</p>
+
+    <p class="phone"><cite>Florian:</cite> Do have normative text
+    about the mechanism to require some keys, to deal with forward
+    compatibility?</p>
+
+    <p class="phone"><cite>kmag:</cite> I don’t think that’s in
+    there yet.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I’ll add an issue for
+    that.</p>
+
+    <p class="phone"><cite>Florian:</cite> Yes, it would be good to
+    have in the spec now that unknown keys can be otherwise ignored.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Issue 13 is about my bit
+    of helper javascript.<br>
+    ... Issue 14. Waiting for Andrey</p>
+
+    <p class="phone"><cite>Florian:</cite> Please @-mention him
+    (and me) in github. Will follow up.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Issues 15/16: at <abbr title="Technical Plenary / Administrative Committee">TPAC</abbr> we agreed
+    on formatting for the webIDL, so I made these changes.<br>
+    ... 18. This was just a work item for me, I filled a section
+    in.<br>
+    ... Issue 19 / gh11. At TPAC we agreed about removing the
+    extension object because it was redundant with runtime. So I
+    did that.<br>
+    ... Issue 20 / 21: These are just work items for me.</p>
+
+    <p class="phone"><cite>kmag:</cite> I’ll add in some
+    documentation from our code. Chrome’s documentation is a bit
+    light, so there are details to fill in</p>
+
+    <p class="phone"><cite>mikepie:</cite> Thanks.<br>
+    ... I have started to do some research about whether our API coverage
+    is sufficient for good support of basic extensions.<br>
+    ... Adding lastError and onInstalled would help,
+    as they are used by a lot of extensions.</p>
+
+    <p class="phone"><cite>kmag:</cite> Not sure about lastError.
+    Not really needed if we’re going the promises.</p>
+
+    <p class="phone"><cite>Florian:</cite> Didn’t we say we kept
+    callbacks as a fall-back?</p>
+
+    <p class="phone"><cite>kmag:</cite> That’s what Firefox does,
+    but I thought said we would not including that in the browser
+    name space, and if you want to do callbacks, you’d do it with a
+    polyfil, maybe under the chrome name space</p>
+
+    <p class="phone"><cite>mikepie:</cite> That’s what we were
+    discussing, but we hadn’t resolved.</p>
+
+    <p class="phone"><cite>shwetank:</cite> I think I want callback
+    fallbacks, but I’ll think about this.</p>
+
+    <p class="phone"><cite>kmag:</cite> The polyfill library I
+    wrote only supports promises in the browser namespace. We
+    could do it the other way around</p>
+
+    <p class="irc">&lt;<cite>kmag</cite>&gt;
+    <a href="https://github.com/mozilla/webextension-polyfill">https://github.com/mozilla/webextension-polyfill</a></p>
+
+    <p class="phone"><cite>Florian:</cite> We need an issue in
+    github to track this debate. I'll open it.</p>
+
+    <p><i>This was later registered as <a href="https://github.com/browserext/browserext/issues/38">issue 38</a></i>.</p>
+
+    <p class="phone"><cite>mikepie:</cite> One last thing. It looks
+    like "capture visible tab" and "onReplaced" would help cover a
+    lot more extensions</p>
+
+    <p class="phone"><cite>kmag:</cite> I am not sure about onReplaced.
+    We have it as a stub, but it is not backed by actual
+    functionality. I don’t actually know when Chrome actually
+    triggers it, the documentation is unclear.</p>
+
+    <p class="phone"><cite>shwetank:</cite> I haven’t seen people use
+    it.</p>
+
+    <p class="phone"><cite>mikepie:</cite> So we can skip that
+    one.</p>
+
+    <h3 id="item05">Next meeting</h3>
+
+    <p class="phone"><cite>all:</cite> [argue back and forth]</p>
+
+    <p class="phone"><cite>Florian:</cite> So we go with Monday
+    November the 7th, half an hour earlier than today (anchored
+    on US time zones).</p>
+  </div>
+
+  <h2><a name="ActionSummary">Summary of Action Items</a></h2>
+  <!-- Action Items -->
+  <strong>[NEW]</strong> <strong>ACTION:</strong> Florian to try and arrange a call with web payment people
+  [recorded in <a href="https://github.com/browserext/native-messaging/issues/6#issuecomment-255313904">https://github.com/browserext/native-messaging/issues/6#issuecomment-255313904</a>]<br>
+
+  <strong>[NEW]</strong> <strong>ACTION:</strong> kmag to get feedback on the logo from Mozilla
+  [recorded in <a href="https://github.com/browserext/browserext.github.io/issues/12#issuecomment-255314648">https://github.com/browserext/browserext.github.io/issues/12#issuecomment-255314648</a>]<br>
