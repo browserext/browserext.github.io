@@ -1,0 +1,412 @@
+---
+title: Browser Extension CG teleconf — 02 Feb 2017
+date: 2017-02-02
+---
+
+  <p><a href="https://lists.w3.org/Archives/Public/public-browserext/2017Feb/0000.html">
+  Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2017/02/02-browserext-irc">IRC log</a></p>
+
+  <h2><a name="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Andrey Rybka (arybka), Mike Pietraszak (mikepie), Scott Low (scottlow), Kris Maglione (kmag3), Florian Rivoal (Florian)</dd>
+
+      <dt>Regrets</dt>
+
+      <dd>Andrew Swan (aswan)
+
+      <dt>Chair</dt>
+
+      <dd>Florian</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Florian</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Extra Agenda Items</a></li>
+
+        <li><a href="#item02">Browserext Protocol &amp; Ids</a></li>
+
+        <li><a href="#item03">Status Update and Issue Resolution on
+        https://browserext.github.io/browserext/</a></li>
+
+        <li><a href="#item04">Scheduling Next Meeting</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+
+    <li><a href="#ResolutionSummary">Summary of
+    Resolutions</a></li>
+  </ul>
+  <hr>
+
+  <div class="meeting">
+    
+
+    <h3 id="item01">Extra Agenda Items</h3>
+
+    <p class="phone"><cite>Florian:</cite> Anything to add to the agenda?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Not from me.</p>
+
+    <p class="phone"><cite>kmag3:</cite> I'd like more discussion about
+    browserext protocol, and randomized IDs.</p>
+
+    <h3 id="item02">Browserext Protocol &amp; Ids</h3>
+
+    <p class="phone"><cite>kmag3:</cite> At the moment, the ids we
+    use in Firefox are always randomized
+    but we haven't explicitly decided what to do with the browserext
+    protocol.</p>
+
+    <p class="phone"><cite>mikepie:</cite> We have not looked at
+    randomized ids yet, but I can look into it if you've got a specific
+    proposal.<br>
+    ... As far as the standardized scheme goes, we don't think
+    the cost/benefit makes it worth doing.<br>
+    ... We realize that doing it early has benefits, but even then,
+    not interested for now.<br>
+    ... For promises, we do agree that it makes sense and are
+    going that way.<br>
+    ... I haven't thought about the implications of randomized IDs,
+    can you explain more?</p>
+
+    <p class="phone"><cite>kmag3:</cite> When the extension is
+    installed we generate a new random id, and from there on that's
+    the id that is used in the URL, for that specific
+    installation.</p>
+
+    <p class="phone"><cite>mikepie:</cite> What about when you want
+    to talk to the extension?</p>
+
+    <p class="phone"><cite>kmag3:</cite> We use an internal id for
+    that, for instance for messaging, but that's unrelated to the
+    one we use in URLs.</p>
+
+    <p class="phone"><cite>arybka:</cite> It makes sense from a
+    security standpoint.</p>
+
+    <p class="phone"><cite>kmag3:</cite> That's the consensus from
+    our security people.</p>
+<a name="action01"></a>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> mikepie and scottlow to look into
+    randomized IDs [recorded in <a href="https://github.com/browserext/browserext/issues/14#issuecomment-276878008">https://github.com/browserext/browserext/issues/14#issuecomment-276878008</a>]</p>
+
+    <h3 id="item03">Status Update and Issue Resolution on <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a>
+</h3>
+
+    <p class="phone"><cite>mikepie:</cite> I don't think the
+    randomized ID issue is tracked, so I'll make one. Let's go
+    through the rest.<br>
+    ... How about we start with the webdriver issues (<a href="https://github.com/browserext/browserext/issues/33">33</a>, <a href="https://github.com/browserext/browserext/issues/34">34</a>)
+    first?</p>
+
+    <p class="phone"><cite>mike:</cite> By the way, what are resolution labels about in Github again?</p>
+
+    <p class="phone"><cite>Florian:</cite> For recording decisions
+    made on the call. If you're closing an issue the old fashioned way, just close it.</p>
+
+    <p class="phone"><cite>mikepie:</cite> <a href="https://github.com/browserext/browserext/issues/14<Paste>">Issue number 14</a>
+    does talk about random IDs. We'll look into it
+    later<br>
+    ... <a href="https://github.com/browserext/browserext/issues/15">Issue #15</a> is about MUST / MAY / SHOULD. I made some changes relating to this.<br>
+    ... I was about to suggest we punt, but maybe you can help me
+    actually.<br>
+    ... I've added a few MAYs and a few MUSTs, and we now have
+    definitions for everything described in the IDL.<br>
+    ... I introduced these from MDN, but that added a whole lot of
+    MAYs, which I am not sure are used right</p>
+
+    <p class="phone"><cite>Florian:</cite> What are they used
+    for?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Descriptions of the state of things, where it is possible that something could be in a certain state.</p>
+
+    <p class="phone"><cite>Florian:</cite> That's not critical. The
+    other way around is annoying, when instructions to to authors or
+    implementors are not clear if they're optional or not.
+    Also a problem when you have a statement that “something must be such and such”
+    when it is not clear who is supposed to be responsible for putting it in that state (authors, UAs...).<br>
+    ... Descriptive statements that (ab)use the MUST / SHOULD / MAY could be improved by rephrasing
+    but they're not actually causing problems, so don't worry.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Ok.</p>
+
+    <p class="phone"><cite>Florian:</cite> Are you waiting for
+    merging this, or is it merged already?</p>
+
+    <p class="phone"><cite>mikepie:</cite> If you're OK with it, I'll do the merge,
+    but we can keep the issue open.</p>
+
+    <p class="phone"><cite>Florian:</cite> go ahead.</p>
+
+    <p class="phone"><strong class="resolution" id="resolution00">RESOLUTION: <a href="https://github.com/browserext/browserext/issues/15#issuecomment-276879915">Merge issue 15</a></strong></p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://github.com/browserext/browserext/issues/16">https://github.com/browserext/browserext/issues/16</a></p>
+
+    <p class="phone"><cite>mikepie:</cite> This one is about
+    normative vs informative statements.<br>
+    ... They were initially all wrong due to copy&amp;paste, but I've
+    gone through and adjusted all that, so it should be good
+    now.</p>
+
+    <p class="phone"><cite>Florian:</cite> I think we should merge
+    this as well.</p>
+
+    <p class="phone"><strong class="resolution" id="resolution01">RESOLUTION: <a href="https://github.com/browserext/browserext/issues/16#issuecomment-276880079">merge issue 16</a></strong></p> 
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://github.com/browserext/browserext/issues/18">https://github.com/browserext/browserext/issues/18</a></p>
+
+    <p class="phone"><cite>mikepie:</cite> This one is about adding
+    an informative section on interaction with the CSP.<br>
+    ... There's also a general section further down about the
+    CSP.</p>
+
+    <p class="phone"><cite>kmag3:</cite> I think the new one should
+    move down;<br>
+    ... and also we should specify the CSP restriction as a CSP
+    policy string.</p>
+
+    <p class="phone"><cite>arybka:</cite> +1</p>
+
+    <p class="phone"><cite>Florian:</cite> Do you have all you need
+    to address this?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes, so I'll leave it open for now and deal with it later.</p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://github.com/browserext/browserext/issues/21">https://github.com/browserext/browserext/issues/21</a></p>
+
+    <p class="phone"><cite>mikepie:</cite> This is about whether and where
+    strings accept null</p>
+
+    <p class="phone"><cite>kmag3:</cite> I am not sure what this is
+    about. We talked about using a JSON file that has info API availibility,
+    but that doesn't include types. We have another source, I can send you a
+    link.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I followed what MDN has
+    to say, and accepted NULL when it said things are optional.</p>
+
+    <p class="phone"><cite>kmag3:</cite> This is generated form the
+    JSON.</p>
+
+    <p class="phone"><cite>Florian:</cite> Is this JSON
+    informative, or used to generate the bindings in Firefox?</p>
+
+    <p class="phone"><cite>kmag3:</cite> The later, so it is authoritative.</p>
+
+    <p class="phone"><cite>Florian:</cite> Is this based on what
+    would be good to do in theory, or on compat with Chrome?</p>
+
+    <p class="phone"><cite>kmag3:</cite> Compat.</p>
+
+    <p class="phone"><strong class="resolution" id="resolution02">RESOLUTION: <a href="https://github.com/browserext/browserext/issues/21#issuecomment-276880161"> merge issue 21</a></strong></p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://github.com/browserext/browserext/issues/23">https://github.com/browserext/browserext/issues/23</a></p>
+
+    <p class="phone"><cite>mikepie:</cite> This one I've
+    already accepted the pull request, but I don't think we've
+    talked through it. This is also heavily pulled form MDN.</p>
+
+    <p class="phone"><cite>kmag3:</cite> I think the text about ids
+    should not go into the manifest, as it is not specific to
+    it.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Should we not have it,
+    or have it in a separate section?</p>
+
+    <p class="phone"><cite>kmag3:</cite> Separate section, to avoid
+    misleading people into thinking it's only available in the
+    manifest.</p>
+<a name="action02"></a>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> mikepie to move section about
+    predefined localization messages out of the manifest section
+    [recorded in <a href="https://github.com/browserext/browserext/issues/24#issuecomment-276877702">https://github.com/browserext/browserext/issues/24#issuecomment-276877702</a>]</p>
+
+    <p class="phone"><cite>mikepie:</cite> can I take the pull
+    request, and then move out the section?</p>
+
+    <p class="phone"><cite>kmag3:</cite> yes</p>
+
+    <p class="phone"><strong class="resolution" id="resolution03">RESOLUTION: <a href="https://github.com/browserext/browserext/issues/23#issuecomment-276880506">merge issue 23, then move part to
+    separate section</a></strong></p>
+
+    <p class="phone"><cite>mikepie:</cite> <a href="https://github.com/browserext/browserext/issues/24">Issue 24</a> is actually the one about a separate section for predefined messages.<br>
+    ... there are more things to go through, but I'd like to talk
+    about web driver first<br>
+    ... Also, scottlow has a proposal about web requests<br>
+    ... kmag3 at TPAC, you had some good suggestions about how to
+    deal with permission UI, so I'd like to check that with you,
+    possibly over mail if you don't get the time today.</p>
+
+    <p class="phone"><cite>scottlow:</cite> <a href="https://github.com/browserext/browserext/issues/34">Issue 34</a>:  I've added a few commands for installing/uninstalling extensions after the
+    browser is launched.<br>
+    ... I added a POST to /sessions/{id}/browserext.<br>
+    ... That's the way sessions are created in webdriver.<br>
+    ... Also added an error code for when the installation fails,
+    maybe due to problems in the manifest.</p>
+
+    <p class="phone"><cite>Florian:</cite> Do we want to
+    discriminate on why installation is failing?</p>
+
+    <p class="phone"><cite>kmag3:</cite> I'd rather leave the
+    details out of the API. Otherwise, people may end up depending
+    on implementation specific details.</p>
+
+    <p class="phone"><cite>scottlow:</cite> The next command is the
+    one to uninstall. Using a DELETE command for that,
+    similarly with an error code when that fails.<br>
+    ... I also made some changes to how takeBrowserExtAction:<br>
+    ... instead of having numerical ids that people need to lookup,
+    we thought that using strings was less error prone and open
+    ended.</p>
+
+    <p class="phone"><cite>Florian:</cite> Yeah, numeric IDs are
+    terrible for extensibility.</p>
+
+    <p class="phone"><cite>scottlow:</cite> The JSON object just
+    gets a type parameter, with any one of these strings.<br>
+    ... I think that sums up the dynamic install/uninstall
+    part.</p>
+
+    <p class="phone"><cite>Florian:</cite> is this a PR you want to
+    merge, or have you already?</p>
+
+    <p class="phone"><cite>scottlow:</cite> This is PR 43.</p>
+
+    <p class="phone"><cite>kmag3:</cite> I'd be happy with merging
+    it now</p>
+
+    <p class="phone"><strong class="resolution" id="resolution04">RESOLUTION: < href="https://github.com/browserext/browserext/pull/43#issuecomment-276880671">merge PR 43</a></strong></p>
+
+    <p class="phone"><cite>mikepie:</cite> <a href="https://github.com/browserext/browserext/issues/33">Issue #33</a> is for context menus. kmag3 asked for other things like separators, checkboxes, so
+    these were added.<br>
+    ... I think that's all there was to it.<br>
+    ... It's been a while, so I am no longer sure. I think I added
+    everything that we supported in our API for context menus.<br>
+    ... kmag3 can you have a look at that section, check if I missed something?</p>
+<a name="action03"></a>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> kmag3 to check if anything is missing
+    from the context menu section [recorded in <a href="https://github.com/browserext/browserext/issues/33#issuecomment-276877509">https://github.com/browserext/browserext/issues/33#issuecomment-276877509</a>]</p>
+
+    <p class="phone"><cite>kmag3:</cite> I think we discussed
+    making it a POST request.<br>
+    ... We also discussed changing its name.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Will do.</p>
+
+    <p class="phone"><cite>scottlow:</cite> <a href="https://github.com/browserext/browserext/issues/45">Issue 45</a>: I'd like to get feedback: do we want to distinguish between xmlhttprequest
+    and fetch?<br>
+    ... I think Google was moving that way, but is getting some
+    backlash<br>
+    ... I think we should distinguish between the two, and keep
+    ping</p>
+
+    <p class="phone"><cite>kmag3:</cite> We have it separately
+    internally, not sure about the API.</p>
+
+    <p class="phone"><cite>scottlow:</cite> ????</p>
+
+    <p class="phone"><cite>Florian:</cite> I did not understand, can you explain a bit more?</p>
+
+    <p class="phone"><cite>mikepie:</cite> For web requests, there
+    are these different types, and a proposal to make fetch a
+    separate type, and another for ping. Google is lumping ping
+    into xmlhttprequest.</p>
+
+    <p class="phone"><cite>scottlow:</cite> We're thinking of
+    keeping ping as a separate thing.<br>
+    ... We are also wondering about a separate one for beacon, or if ping
+    is OK for both.</p>
+
+    <p class="phone"><cite>kmag3:</cite> No strong opinion</p>
+
+    <p class="phone"><strong class="resolution" id="resolution05">RESOLUTION: <a href="https://github.com/browserext/browserext/issues/45#issuecomment-276881038">add fetch, keep ping</a></strong></p>
+<a name="action04"></a>
+
+    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> kmag3 to check with mozilla engineers
+    about beacon [recorded in <a href="https://github.com/browserext/browserext/issues/45#issuecomment-276881216">https://github.com/browserext/browserext/issues/45#issuecomment-276881216</a>]</p>
+
+    <h3 id="item04">Scheduling Next Meeting</h3>
+
+    <p class="phone"><cite>Florian:</cite> Current time is ideal
+    for me, an hour early works too.</p>
+
+    <p class="phone"><cite>kmag3:</cite> This or earlier is equally
+    good.</p>
+
+    <p class="phone"><cite>arybka:</cite> Earlier would be
+    nicer.</p>
+
+    <p class="phone"><cite>mikepie:</cite> How about 1h
+    earlier?</p>
+
+    <p class="phone"><cite>all:</cite> Yes</p>
+
+    <p class="phone"><cite>mikepie:</cite> How about 2 weeks from
+    now, on the 15th, 5:30pm PST?</p>
+
+    <p class="phone"><cite>all:</cite> Yes</p>
+  </div>
+
+  <h2><a name="ActionSummary">Summary of Action Items</a></h2>
+  <!-- Action Items -->
+  <a href="#action03"><strong>[NEW]</strong> <strong>ACTION:</strong> kmag3 to check if
+  anything is missing from the context menu section</a><br>
+
+  <a href="#action04"><strong>[NEW]</strong> <strong>ACTION:</strong> kmag3 to check
+  with mozilla engineers about beacon</a><br>
+
+  <a href="#action01"><strong>[NEW]</strong> <strong>ACTION:</strong> mikepie and
+  scottlow to look into randomized IDs</a><br>
+
+  <a href="#action02"><strong>[NEW]</strong> <strong>ACTION:</strong> mikepie to move
+  section about predefined localization messages out of the
+  manifest section</a><br>
+
+   <br>
+
+  <h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+  <!-- Resolutions -->
+
+  <ol>
+    <li><a href="#resolution00">merge issue 15</a></li>
+
+    <li><a href="#resolution01">merge issue 16</a></li>
+
+    <li><a href="#resolution02">merge issue 21</a></li>
+
+    <li><a href="#resolution03">merge issue 23, then move part to
+    separate section</a></li>
+
+    <li><a href="#resolution04">merge PR 43</a></li>
+
+    <li><a href="#resolution05">add fetch, keep ping</a></li>
+  </ol><br>
+  
+
+  
+
+  
