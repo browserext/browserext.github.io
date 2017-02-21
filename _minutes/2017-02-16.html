@@ -1,0 +1,246 @@
+---
+title: Browser Extension CG teleconf — 16 Feb 2017
+date: 2017-02-16
+---
+  <p><a href="https://lists.w3.org/Archives/Public/public-browserext/2017Feb/0003.html">
+  Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2017/02/16-browserext-irc">IRC log</a></p>
+
+  <h2><a name="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Mike Pietraszak (mikepie), Kris Maglione (John-Gal2), Florian Rivoal (Florian), Scott Low (scottlow)</dd>
+
+
+      <dt>Chair</dt>
+
+      <dd>Florian</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Florian</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Status update and issue resolution
+        on https://browserext.github.io/browserext/</a></li>
+
+        <li><a href="#item02">Next meeting</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ResolutionSummary">Summary of Resolutions</a></li>
+  </ul>
+  <hr>
+
+  <div class="meeting">
+    
+    <h3 id="item01">Status update and issue resolution on
+    <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a>
+</h3>
+
+    <p class="phone"><cite>mikepie:</cite> I haven't had a chance
+    to go through the IDs questions yet.<br>
+    ... But other than what we have on the call today, that's the
+    only thing left, so we'll look into it.<br>
+    ... on <a href="https://github.com/browserext/browserext/issues/15">issue 15</a>, we're past the 10 days after resolution, so we
+    can close<br>
+    ... <a href="https://github.com/browserext/browserext/issues/31">Next issue</a>: we had already specified that the object
+    returned by webdriver's getBrowserExtension method had an id,
+    and I also specified that it should have the name.</p>
+
+    <p class="phone"><cite>kmag:</cite> This needs to be
+    localized<br>
+    ... Not sure which locale to use though.</p>
+
+    <p class="phone"><cite>Florian:</cite> This is a setting that
+    is often wrong.</p>
+
+    <p class="phone"><cite>kmag:</cite> If we want to match the
+    browser's UI locale, we need to expose that.</p>
+
+    <p class="phone"><cite>Florian:</cite> In some cases you may
+    want to match the site rather than the UI.</p>
+
+    <p class="phone"><cite>scottlow:</cite> Since the ID is an
+    unpredictable number, you need a name to be able to know which
+    extension your talking to.</p>
+
+    <p class="phone"><cite>Florian:</cite> If that's what its for,
+    it doesn't need localization, it needs predictability.</p>
+
+    <p class="phone"><cite>mike:</cite> So we can use the default
+    locale.</p>
+
+    <p class="phone"><a href="https://github.com/browserext/browserext/issues/31#issuecomment-281252511"><strong class="resolution" id="resolution01">RESOLUTION: Add the name property, and define it to be the default locale</strong></a></p>
+
+    <p class="phone"><cite>mikepie:</cite> <a href="https://github.com/browserext/browserext/issues/46">Issue 46</a>: This is about
+    interacting with permission prompts.<br>
+    ... I made 3 additions:<br>
+    ... the API lets you get the localized text of the permission
+    prompt, and based on it accept it or dismiss it.</p>
+
+    <p class="phone"><cite>kmag:</cite> I'm worried about text
+    matching.</p>
+
+    <p class="phone"><cite>Florian:</cite> What options do we
+    have?</p>
+
+    <p class="phone"><cite>kmag:</cite> We have a permission name
+    string, and return that in JSON.<br>
+    ... These names are already standard.</p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; (3) requestingUrl</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'll replace that string
+    with a JSON object, including "requestingUrl"...<br>
+    ... Also "permissions".</p>
+
+    <p class="phone"><cite>Florian:</cite> Why plural?</p>
+
+    <p class="phone"><cite>kmag:</cite> I think there can be
+    multiple permissions in one dialog</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes, at install time, an
+    extension can ask for multiple permission</p>
+
+    <p class="phone"><cite>scottlow:</cite> are these optional
+    permissions?</p>
+
+    <p class="phone"><cite>kmag:</cite> In our case, geolocation is
+    a bit special, but otherwise yes.</p>
+
+    <p class="phone"><cite>scottlow:</cite> Are these about
+    security permissions as well?</p>
+
+    <p class="phone"><cite>kmag:</cite> No.</p>
+
+    <p class="phone"><cite>Florian:</cite> We will deal with
+    run-time permissions with this as well?<br>
+    ... What if there's multiple ones queued up</p>
+
+    <p class="phone"><cite>kmag:</cite> You would have to accept or
+    dismiss them in the order they are being displayed at. You
+    cannot get the list of all queued permissions at once.</p>
+
+    <p class="phone"><cite>Florian:</cite> Don't we run the risk that this will
+    make authors depend on browser specific ordering of the
+    permission prompts?</p>
+
+    <p class="phone"><cite>kmag:</cite> We do, but that's the
+    sanest thing we can do anyway.<br>
+    ... This can only happen if requesting multiple permissions at
+    the same time.</p>
+
+    <p class="phone"><cite>Florian:</cite> Yeah, this isn't great,
+    as we may get authors to depend on the ordering even though
+    they shouldn't, but I cannot think of a better alternative.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'll add a note to call
+    it out.<br>
+    ... and the third property is the prompt text</p>
+
+    <p class="phone"><a href="https://github.com/browserext/browserext/issues/46#issuecomment-281253274"><strong class="resolution" id="resolution02">RESOLUTION: add requestingURL, permissions and
+    promptText</strong><br>
+    ... the name of the method is getBrowserPermission (without
+    Text)</a></p>
+
+    <p class="phone"><cite>kmag:</cite> We should also return a
+    list of possible actions, such as "accept for session" in
+    addition to just "accept" and "dismiss".</p>
+
+    <p class="phone"><cite>mikepie:</cite> Yes, I can add that. I
+    like it.</p>
+
+    <p class="phone"><a href="https://github.com/browserext/browserext/issues/46#issuecomment-281253274"><strong class="resolution" id="resolution03">RESOLUTION: add "actions", which must include "accept" and "dismiss", and possibly other actions as available</strong></a></p>
+
+    <p class="phone"><cite>Florian:</cite> We need to come of with
+    names for these.</p>
+
+    <p class="phone"><cite>mikepie:</cite> This is also something
+    you'd want to handled declaratively.</p>
+
+    <p class="phone"><cite>kmag:</cite> That worries me<br>
+    ... I think the default one should not be "dismiss"
+    temporarily, it should be "deny"</p>
+
+    <p class="phone"><cite>mike:</cite> This should be for the
+    session, right?</p>
+
+    <p class="phone"><cite>mikepie:</cite> With webdriver, the
+    install are just for the session anyway.</p>
+
+    <p class="irc">&lt;<cite>mikepie</cite>&gt; mandatory: accept;
+    deny (for session? permanent?)</p>
+
+    <p class="phone"><cite>mikepie:</cite> Session and permanent is
+    the same, since the extension is only installed for the
+    session.</p>
+
+    <p class="phone"><cite>Florian:</cite> Right, but deny and
+    dismiss are different</p>
+
+    <p class="phone"><cite>kmag:</cite> Correct, and we should go with deny
+    rather than dismiss as the mandatory one</p>
+
+    <p class="phone"><a href="https://github.com/browserext/browserext/issues/46#issuecomment-281253274"><strong class="resolution" id="resolution04">RESOLUTION: replace dismiss with deny</strong></a></p>
+
+    <p class="phone"><cite>Florian:</cite> Do we need to come up
+    with names?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Since there's no
+    difference between permanent and for this session only, allow,
+    deny and dismiss are all we need.</p>
+
+    <p class="phone"><cite>Florian:</cite> So we only have 2
+    possible cases at install time, and 3 at run time</p>
+
+    <p class="phone"><cite>kmag:</cite> At install time, the only
+    choise is really install extension or not.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'll add a section to
+    explain what kind of thing can appear there.</p>
+
+    <p class="phone"><cite>Florian:</cite> If there can be other
+    names, do we need to standardize?</p>
+
+    <p class="phone"><cite>all:</cite> Yes, but not now.</p>
+
+    <p class="phone"><cite>Florian:</cite> mikepie, you can merge
+    the PR once the changes are in.</p>
+
+    <h3 id="item02">Next meeting</h3>
+
+    <p class="phone"><cite>mikepie:</cite> How about the Ides of
+    March.</p>
+
+    <p class="phone"><cite>all:</cite> Agreed.</p>
+  </div>
+
+  <h2><a name="ResolutionSummary">Summary of Resolutions</a></h2>
+  <!-- Resolutions -->
+
+  <ol>
+    <li><a href="#resolution01">Add the name property, and define
+    it to be the default locale</a></li>
+
+    <li><a href="#resolution02">add requestingURL, permissions and
+    promptText</a></li>
+
+    <li><a href="#resolution03">add "actions", which must include
+    "accept" and "dismiss", and and possibly other actions as
+    available</a></li>
+
+    <li><a href="#resolution04">replace dismiss with deny</a></li>
+  </ol><br>
