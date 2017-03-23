@@ -1,0 +1,136 @@
+---
+title: Browser Extension CG teleconf — 23 Mar 2017
+date: 2017-03-23
+---
+
+  <p><a href="https://lists.w3.org/Archives/Public/public-browserext/2017Mar/0000.html">
+  Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2017/03/23-browserext-irc">IRC log</a></p>
+
+  <h2><a name="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Florian Rivoal (Florian), Mike Pietraszak (mikepie), Scott Low (scottlow)</dd>
+
+      <dt>Regrets</dt>
+
+      <dt>Chair</dt>
+
+      <dd>Florian</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Florian</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Agenda</a></li>
+
+        <li><a href="#item02">Demo</a></li>
+
+        <li><a href="#item03">Manifest</a></li>
+
+        <li><a href="#item04">Tests</a></li>
+
+        <li><a href="#item05">Next meeting</a></li>
+      </ol>
+    </li>
+  </ul>
+  <hr>
+
+  <div class="meeting">
+    <h3 id="item01">Agenda</h3>
+
+    <p class="phone"><cite>Florian:</cite> Not having full
+    attendance, should we work on only part of the agenda?<br>
+    ... Demo, manifest, tests?</p>
+
+    <p class="phone"><cite>mikepie:</cite> Sure.</p>
+
+    <h3 id="item02">Demo</h3>
+
+    <p class="phone"><cite>mikepie:</cite> I wrote an extension that tests the browser.runtime API,
+    and run it from my WPT fork <a href="https://github.com/mikepie1/web-platform-tests/tree/mikepie1/browserext/)">
+    https://github.com/mikepie1/web-platform-tests/tree/mikepie1/browserext/)</a><br>
+
+    ... This will run in FF, Edge, and Chrome. I have not tested Opera yet.<br>
+    ... The WPT folder structure mirrors spec sections.</p>
+
+    <p class="phone"><cite>Florian:</cite> Mirroring spec sections is good.
+    Also, make sure to use the exact id used by each section,
+    so that software can automatically match the section and corresponding tests.</p>
+
+    <p class="desc">mikepie makes a demo.</p>
+
+    <p class="phone"><cite>scottlow:</cite> Should we test
+    webdriver itself?</p>
+
+    <p class="phone"><cite>Florian:</cite> I think so.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'll get advice from
+    experts on how to do that.</p>
+
+    <p class="phone"><cite>Florian:</cite> Can you change the 2 sec
+    wait to a 2 sec timeout, letting the test finish faster if it
+    can? Thinking of continuous integration.</p>
+
+    <p class="phone"><cite>mikepie:</cite> Will do.<br>
+    ... After failing a test if the browser object is missing,
+    I alias any vendor specific name to the "browser" name so that other tests can run.</p>
+
+    <p class="phone"><cite>Florian:</cite> This sounds useful.
+    We should check with WPT people if they already have a policy on
+    this.<br>
+    ... A key point is to run this in CI.
+    Since extension tests are new, we need to check with each
+    browser if they are OK with this structure
+    for tests to get picked up by CI systems.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I'll check on our side.</p>
+
+    <p class="phone"><cite>Florian:</cite> We need to check with WPT if we're doing things the right way,
+    and who needs review/merge access,
+    since WPT has a policy of review-then-merge.</p>
+
+    <p class="phone"><cite>mikepie:</cite> &lt;/demo&gt;</p>
+
+    <h3 id="item03">Manifest</h3>
+
+    <p class="phone"><cite>Florian:</cite> I've done a quick review
+    of the manifest section, and overall it's good.<br>
+    ... There are a few place where you can guess what the spec
+    means, but it isn't actually saying it unambiguously. Also
+    places where it says something is required, but not what
+    happens if you omit it.<br>
+    ... Will send details on github.</p>
+    <p class="phone"><cite>Florian:</cite> Also, the pre-parsing section
+    says to strip "//" comments, but does not say anything about "/* */" comments.</p>
+
+    <p class="phone"><cite>mikepie:</cite> I believe we decided on that way back at the beginning of the CG. I do not remember why.</p>
+    <p class="phone"><cite>Florian:</cite> I do remember we decided to strip comments,
+    but I have no memory of a distinction between "//" and "/**/".<br>
+    ... I'll check minutes to see if there was a rationale,
+    and otherwise will send a pull request.</p>
+
+    <h3 id="item04">Tests</h3>
+
+    <p class="phone"><cite>Florian:</cite> we covered this during the demo.</p>
+
+    <h3 id="item05">Next meeting</h3>
+
+    <p class="phone"><cite>Florian:</cite> Given the limited
+    attendance today, it doesn't make a whole lot of sense to
+    decide on a date during the call. Let's see over email, trying
+    for next week.</p>
+  </div>

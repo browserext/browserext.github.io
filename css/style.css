@@ -96,3 +96,7 @@ aside.exit::before {
 	display: block;
 	margin-bottom: 1em;
 }
+.desc {
+	font-style: italic;
+	text-align: center;
+}
