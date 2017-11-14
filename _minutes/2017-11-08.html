@@ -1,0 +1,311 @@
+---
+title: Browser Extension TPAC breakout session — 08 Nov 2017
+date: 2017-11-08
+---
+<h2><a name="attendees">Attendees</a></h2>
+
+<aside class=note><p>Not all participants recorded their presence or name in IRC. If you are missing from this list or know someone who is, please <a href="https://github.com/browserext/browserext.github.io/pulls">send a pull request</a>.</p></aside>
+
+<div class="intro">
+	<dl>
+		<dt>Present</dt>
+
+		<dd>Chaals McCathie Neville (chaals), Florian Rivoal (florian), Vincent Scheib (scheib), John Hazen (John), Thomas Wisniewski (twisniewski), Fuqiao, Max, Judyzhu, Hiroki_Asakimori (Hiroki Asakimori), tom, MK</dd>
+
+		<dt>Chair</dt>
+
+		<dd>florian</dd>
+
+		<dt>Scribe</dt>
+
+		<dd>chaals</dd>
+	</dl>
+</div>
+
+<h2>Contents</h2>
+
+<ul>
+	<li>
+		<a href="#agenda">Topics</a>
+
+		<ol>
+			<li><a href="#item01">Current Status</a></li>
+			<li><a href="#item02">Rebuild group?</a></li>
+		</ol>
+	</li>
+
+</ul>
+<hr>
+
+<div class="meeting">
+
+	<h3 id="item01">Current Status</h3>
+
+	<p class="phone"><cite>florian:</cite> Everyone had their own
+	extension mechanisms, and then people started looking to use
+	Google's one, and then Opera switched to blink and got it<br>
+	... firefox and MS have things that are very close. This CG was
+	trying to standardise it.<br>
+	... documentation and code went well, not much standardisation
+	work.</p>
+
+
+	<p class="phone"><cite>florian:</cite> few people participate in meetings.</p>
+
+	<aside class=note>
+		<ul>
+			<li><a href="https://browserext.github.io/">https://browserext.github.io/</a></p></li>
+			<li><a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a></li>
+			<li><a href="https://browserext.github.io/native-messaging/">https://browserext.github.io/native-messaging/</a></li>
+		</ul>
+	</aside>
+
+	<p class="phone"><cite>florian:</cite> we have a website, 2 specs,
+	and they have been not moved much for 6 months.<br>
+	... Looking for people willing to work on this, because it
+	would be nice to have tests, etc<br>
+	... We had browsers for a while. Some extension developers
+	would like to participate, but cannot do it all.</p>
+
+
+	<p class="phone"><cite>John:</cite> From Edge, we continue to
+	be interested. But the person doing stuff here got moved. We
+	ould like this to move forward.<br>
+	... what do we want to do next - we focused on common subset
+	essential for large extgension developers.<br>
+	... To what extent could we get Google to participate more? It
+	was notably lacking in the past but there are a lot of people
+	in here.</p>
+
+	<p class="phone"><cite>scheib:</cite> Work on Chrome. Don't think
+	we have direct contributors to extensions area here, but I am
+	familiar with them.<br>
+	... When the project launched to standardise we discussed and
+	made some statements of what we were interested in doing - from
+	Devlin.<br>
+	... Google are interested in standardising some portions if we
+	can work on a standard that moves forward addressing known
+	problems with the system.<br>
+	... the platform solved problems we had seen in older systems.
+	But we did it very desktop-focused, learned a lot about how
+	people abuse the system<br>
+	... trying to promote malware :( The majority of users are
+	moving to mobile, the system is not a good fit for
+	mobile.<br>
+	... Especially for performance.<br>
+	... We're interested in forward-looking work suitable for
+	mobile addressing problems we see now.<br>
+	... Also, some APIs should be very user-agent specific,
+	allowing for substantial variation exposing custom
+	functionality.<br>
+	... Some things become common so we all do the same and then we
+	can standardise, but not everything.<br>
+	... This approach has a cost - the extensions developer
+	community has to deal with changing API shapes.<br>
+	... We are working on that so we will offer new capabilities
+	only to people who move to the new architecture.<br>
+
+	... Plugins have
+	been around for ages. They offered serious feature power. But
+	extension integrates with user agent, plugin just makes ahole
+	and lets you do different stuff in there.<br>
+
+	... so how de we
+	enable new capabilities out of the box, and get us onto
+	mobile.</p>
+
+	<p class="phone"><cite>florian:</cite> There was
+	interest to make the extension world connect to stuff outside
+	the browser.<br>
+
+	... Interested in
+	the statement about your goals and concerns - I had heard
+	earlier as more like "we're busy and don't want to be held back
+	from breaking things."<br>
+
+	... there is
+	willingness in the community to make breaking change. And agree
+	that we are not looking for 100% compat on everything.<br>
+
+	... Think the
+	status quo was not seen as a goal but as a starting point.</p>
+
+	<p class="phone"><cite>twisniewski:</cite> Representing
+	Andy McKay - we're interested in getting involved and working
+	together, now we are not so buried in development work.</p>
+
+	<p class="phone"><cite>tom:</cite> have an
+	extension on a couple of stores. aliasing a couple of things
+	was really easy. Getting it to work was one thing - getting it
+	in the stores was another = publishing process is a
+	bottleneck.<br>
+
+	...Any change
+	requires rebuilding assets, etc. That was a pain, while coding
+	is really simple now.<br>
+
+	... understand
+	branding requirements, can we relax it?</p>
+
+	<p class="phone"><cite>John:</cite> in the
+	beginning we focused on APIs, knowing the publication pipelines
+	would be difficult and different.<br>
+
+	... so it sounds
+	like we got that bit done and can talk on how to make
+	publishing better. There are some aspects of the ecosystem that
+	are tightly couple to the user agent, some coupled to the
+	underlying platform.<br>
+
+	... don't want to
+	get so bogged down in resolving those differences that we
+	cannot move forward the core API stuff. But we feel that pain
+	too, other developers reflect your comment.</p>
+
+	<p class="phone"><cite>florian:</cite> Agree on
+	priority. Distribution is not just technical, there are
+	business considerations. If the business side wants to share,
+	the technical side should support that as far as possible.<br>
+
+	... side stores
+	for internal use, as well as public app stores, are important.
+	we want to look at that, but it wasn't / isn't the first
+	priority</p>
+
+	<p class="phone"><cite>John:</cite> Edge is
+	struggling to find performance budget to get a nice platform
+	for extensions on mobile at the moment, but we are very
+	interested in the discussion.<br>
+
+	... So most of our
+	concern will be on desktop but we welcome work that is more
+	focused on enabling mobile-friendly platform</br>
+
+	... I don't hear
+	anything in the discussion that makes me think we are going to
+	run into some intractable conflict if we move forward.</p>
+
+	<p class="phone"><cite>scheib</cite> packaging and
+	publishing - we should be looking at web app manifest.<br>
+
+	... Service
+	Workers had a lot of antecedents.<br>
+
+	... We should work
+	with web standards for e.g. packaging.</p>
+
+	<p class="phone"><cite>florian:</cite> Makes sense to
+	go that way if it's where people want to go.</p>
+
+	<p class="phone"><cite>John</cite> Sounds
+	reaonsable.</p>
+
+	<p class="phone"><cite>chaals:</cite> There are
+	intertwined histories of app/extensions and web standards</p>
+
+	<p class="phone"><cite>scheib:</cite> We may get
+	more traction by framing the discussions to make sure we are
+	bringing things closer into the Web ecosystem, where
+	possible.</p>
+
+	<p class="phone"><cite>twisniewski:</cite> We also want
+	to focus on what is relevant, and agree that moving into the
+	Web platform as far as it makes sense is the way to go.</p>
+
+	<p class="phone"><cite>John</cite> Big
+	challenge for moving to pure web manifest / Web distribution
+	model is our concern over security / privacy issues.<br>
+
+	... We have chosen
+	to have very constrained distribution model, to help us handle
+	those concerns.<br>
+
+	... Also coupled
+	to security issues arising from great power. Moving beyond
+	store model, we would need to address this.</p>
+
+	<p class="phone"><cite>scheib</cite> Think we
+	should package the assets, but no problem with allowing for
+	curated store as the primary channel.</p>
+
+	<p class="phone"><cite>John:</cite> Makes
+	sense.</p>
+
+	<p class="phone"><cite>twisniewski:</cite> Collaboration
+	on security / privacy issues would be really helpful. Everyone
+	keeps their own mechanisms and approaches.</p>
+
+	<p class="phone"><cite>MK:</cite> would it be
+	possible to extend the browser with new protocols?<br>
+
+	... we try to
+	extend into WoT - can that be better supported in Web
+	Browsers?</p>
+
+	<p class="phone"><cite>florian:</cite> If we can do
+	it outside extensions in Web PLatform, that would be better.
+	Otherwise, where we look at using plugin-type extension might
+	be an approach.</p>
+
+	<p class="phone"><cite>twisniewski:</cite> My experience
+	is that if it fits in the Web itself, we would rather do
+	that.<br>
+
+	... Sooo, "Yes.
+	And No."<br>
+
+	... start a
+	discussion, and we will try to figure out what happens. Don't
+	be discouraged if something is not getting traction,
+	iterate.<br>
+
+	... We are busy,
+	and forget to be diplomatic sometimes.</p>
+
+	<h3 id="item02">Rebuild group?</h3>
+
+	<p class="phone"><cite>florian:</cite> What is a good
+	work mode for people to move forward?<br>
+
+	... we had github
+	and some teleconfs. Should we do just github, lots of telecons,
+	something else that a person not here needs to describe?</p>
+
+	<p class="phone"><cite>chaals:</cite> No github ==
+	death. Weekly telecon is required to make sure people are
+	generally available, but too frequent for this.</p>
+
+	<p class="phone"><cite>florian:</cite> Yeah, that's how we ended here.</p>
+
+	<p class="phone"><cite>John:</cite> I think
+	there are clearly needs to talk to people outside this room
+	first, I think we will need some teleconfs, but we can make a
+	lot of progress on github and not suffer too much pain on
+	teleconfs.<br>
+
+	... I'll look for
+	people who can participate.</p>
+
+	<p class="phone"><cite>florian:</cite> I can host
+	teleconf - even not being there if that somehow helps.</p>
+
+	<p class="phone"><cite>chaals:</cite> A periodic
+	email can serve a similar forcing function - not as effectively
+	as a teleconf buit without having to run a teleconf.</p>
+
+	<p class="phone"><cite>florian:</cite> That seems
+	feasible</p>
+
+	<p class="phone"><cite>twisniewski:</cite> We're busy...
+	been trying to replace our legacy API set with new stuff,
+	aiming to make it shareable.<br>
+
+	... trying to add
+	features that are extensions rather than extending the Web in
+	extensions.<br>
+
+	... We have
+	bi-weekly meetings on this, and people are welcome to attend
+	and tell us not to build piles of APIs nobody wants that will
+	lead to fragmentation as others do it differently...</p>
+</div>
