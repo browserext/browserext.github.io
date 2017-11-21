@@ -36,5 +36,5 @@ File.open("#{__dir__}/../_minutes/#{ARGV[1]}.html", "w") do |f_out|
 	f_out.puts "<div class='todo'>Review and clean up the minutes, then remove this message.</div>"
 	f_out.puts "<div class='todo'>Replace any shortened URL with the expanded version.</div>"
 	f_out.puts "<div class='todo'>Make Resolutions and Actions link to github issues, then remove this message.</div>"
-	f_out.puts @doc.css("body").inner_html.sub("[End of minutes]","")
+	f_out.puts @doc.css("body").inner_html.sub("[End of minutes]","").sub("cite>", "b>")
 end

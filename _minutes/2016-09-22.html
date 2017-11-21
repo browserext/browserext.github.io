@@ -84,55 +84,55 @@ date: 2016-09-22
     
     <h3 id="item01">Agenda</h3>
 
-    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://github.com/browserext/browserext.github.io/wiki/2016-TPAC-Agenda">
+    <p class="irc">&lt;<b>mikepie</b>&gt; <a href="https://github.com/browserext/browserext.github.io/wiki/2016-TPAC-Agenda">
     https://github.com/browserext/browserext.github.io/wiki/2016-TPAC-Agenda</a></p>
 
-    <p class="phone"><cite>Florian:</cite> Any suggestion /
+    <p class="phone"><b>Florian:</b> Any suggestion /
     addition / change to the agenda?</p>
 
-    <p class="phone"><cite>all:</cite> Going top down seems good.</p>
+    <p class="phone"><b>all:</b> Going top down seems good.</p>
 
     <h3 id="item02">Promises in async methods</h3>
 
-    <p class="phone"><cite>kmag:</cite> I just think this is
+    <p class="phone"><b>kmag:</b> I just think this is
     something we should do, and would like feedback.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> I agree, but how
+    <p class="phone"><b>andrey-rybka:</b> I agree, but how
     does this relate to extensions?</p>
 
-    <p class="phone"><cite>kmag:</cite> Chrome APIs use callbacks,
+    <p class="phone"><b>kmag:</b> Chrome APIs use callbacks,
     but they don't compose nicely.
     Promises are better.</p>
 
-    <p class="phone"><cite>mikepie:</cite> A goal of this group is
+    <p class="phone"><b>mikepie:</b> A goal of this group is
     compatibility with what's out there, so that's a source of tension.</p>
 
-    <p class="phone"><cite>kmag:</cite> I'd like to release a
+    <p class="phone"><b>kmag:</b> I'd like to release a
     polyfill, which would bridge that gap.</p>
 
-    <p class="phone"><cite>Florian:</cite> It would be good to be
+    <p class="phone"><b>Florian:</b> It would be good to be
     as close as possible to Chrome, but as that is a moving target,
     it may be difficult to have the spec really match that. So
     specifying what we think is best, and bridging the gap with a
     polyfill can make sense.</p>
 
-    <p class="phone"><cite>kmag:</cite> Promises is something a
+    <p class="phone"><b>kmag:</b> Promises is something a
     lot of people want anyway, so that would also encourage people
     to develop this version of extensions, and use a polyfill to
     make that work on Chrome.</p>
 
-    <p class="phone"><cite>mikepie:</cite> We only have 1 namespace
+    <p class="phone"><b>mikepie:</b> We only have 1 namespace
     in Edge (browser), so I can see with our engineering team to
     see if we can have two, one with promises, and one with
     callbacks to be Chrome compatible, as Mozilla is doing.
     We'll look into it.
     We prefer to use promises, but we want to be careful about compat.</p>
 
-    <p class="phone"><cite>kmag:</cite> In our promises based API,
+    <p class="phone"><b>kmag:</b> In our promises based API,
     we also accept callbacks.</p>
 <a name="action01" id="action01"></a>
 
-    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <p class="irc">&lt;<b>scribe</b>&gt;
     <strong>ACTION:</strong> mikepie to check whether a promises
     based API is doable [recorded in <a href="https://github.com/browserext/browserext/issues/12">
     https://github.com/browserext/browserext/issues/12]</a></p>
@@ -145,175 +145,175 @@ date: 2016-09-22
     <p class="phone"><a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/browserAction#Browser_compatibility">
     https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API/browserAction#Browser_compatibility</a></p>
 
-    <p class="phone"><cite>mikepie:</cite> As we move forward with
+    <p class="phone"><b>mikepie:</b> As we move forward with
     implementation, we've found examples of how browsers document
     what's supported across browsers.
     This tool compares IDL and implementations, and give you a
     visualization.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Really nice.</p>
+    <p class="phone"><b>andrey-rybka:</b> Really nice.</p>
 
-    <p class="phone"><cite>mikepie:</cite> MDN also has this kind
+    <p class="phone"><b>mikepie:</b> MDN also has this kind
     of information in a different format.<br>
     What should be the next step?</p>
 
-    <p class="phone"><cite>kmag:</cite> On MDN, we would list
+    <p class="phone"><b>kmag:</b> On MDN, we would list
     everything that's on the spec, and list support, and also
     mention deviations from the spec.</p>
 
-    <p class="phone"><cite>mikepie:</cite> If we have webIDL, we
+    <p class="phone"><b>mikepie:</b> If we have webIDL, we
     can do that visual representation, and fold that in.</p>
 
-    <p class="phone"><cite>kmag:</cite> We have tools to extract
+    <p class="phone"><b>kmag:</b> We have tools to extract
     doc from webIDL. I can talk to our people about that.</p>
 
-    <p class="phone"><cite>mikepie:</cite> For MS, webIDL is the
+    <p class="phone"><b>mikepie:</b> For MS, webIDL is the
     source for this.</p>
 
-    <p class="phone"><cite>kmag:</cite> We have a database with
+    <p class="phone"><b>kmag:</b> We have a database with
     JSON in it.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> What does “no” mean
+    <p class="phone"><b>andrey-rybka:</b> What does “no” mean
     in this MDN page?</p>
 
-    <p class="phone"><cite>kmag:</cite> It just means “not
+    <p class="phone"><b>kmag:</b> It just means “not
     supported”.</p>
 
-    <p class="phone"><cite>AndersR:</cite> FF on android is all
+    <p class="phone"><b>AndersR:</b> FF on android is all
     noes.</p>
 
-    <p class="phone"><cite>kmag:</cite> That's just the release
+    <p class="phone"><b>kmag:</b> That's just the release
     version.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I think we're going to
+    <p class="phone"><b>mikepie:</b> I think we're going to
     do both approaches, we'll work with MDN and see if we can
     integrate. We'll reach out to other browser vendors as well.</p>
 
-    <p class="phone"><cite>kmag:</cite> Can you work with our json
+    <p class="phone"><b>kmag:</b> Can you work with our json
     database?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Yes.</p>
+    <p class="phone"><b>mikepie:</b> Yes.</p>
 
     <h3 id="item04">Confirm top object name (browser)</h3>
 
     <p class="phone"><a href="http://browserext.github.io/minutes/2016-06-09.html">http://browserext.github.io/minutes/2016-06-09.html</a></p>
 
-    <p class="phone"><cite>mikepie:</cite> Just wanted to make sure everyone had a say.</p>
+    <p class="phone"><b>mikepie:</b> Just wanted to make sure everyone had a say.</p>
 
-    <p class="phone"><cite>Florian:</cite> Shwetank pushed back a bit, but only a bit, and everyone else is in agreement.</p>
+    <p class="phone"><b>Florian:</b> Shwetank pushed back a bit, but only a bit, and everyone else is in agreement.</p>
 
     <h3 id="item05">Confirm protocol name proposed on 2016/06/09 ("browserext://")</h3>
 
-    <p class="phone"><cite>mikepie:</cite> I got some feedback that
+    <p class="phone"><b>mikepie:</b> I got some feedback that
     that some people expect a dash between browser and ext, but I
     am fine that way.</p>
 
-    <p class="phone"><cite>kmag:</cite> I'm fine with this.<br>
+    <p class="phone"><b>kmag:</b> I'm fine with this.<br>
     It seems more usual for a protocol not to have a dash.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I'm fine with it, but others
+    <p class="phone"><b>mikepie:</b> I'm fine with it, but others
     have used a dash, so some expect consistency.</p>
 
-    <p class="phone"><cite>Florian:</cite> No strong opinion either way.</p>
+    <p class="phone"><b>Florian:</b> No strong opinion either way.</p>
 
-    <p class="irc">&lt;<cite>kmag</cite>&gt; List of registered
+    <p class="irc">&lt;<b>kmag</b>&gt; List of registered
     URI schemes: <a href="http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">
     http://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml</a></p>
 
-    <p class="phone"><cite>kmag:</cite> I don't want to do this
+    <p class="phone"><b>kmag:</b> I don't want to do this
     twice, whatever we pick, let's stick to it.</p>
 
-    <p class="phone"><cite>mikepie:</cite> So we keep it as it
+    <p class="phone"><b>mikepie:</b> So we keep it as it
     is.</p>
 
-    <p class="phone"><cite>kmag:</cite> Yes, every other protocol is dashless,
+    <p class="phone"><b>kmag:</b> Yes, every other protocol is dashless,
     except some vendor specific things, which this is not.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Makes sense.</p>
+    <p class="phone"><b>andrey-rybka:</b> Makes sense.</p>
 
-    <p class="phone"><cite>Florian:</cite> So we keep it as
+    <p class="phone"><b>Florian:</b> So we keep it as
     previously resolved.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Dashes seem more
+    <p class="phone"><b>andrey-rybka:</b> Dashes seem more
     appropriate for vendor prefixing.</p>
 
     <h3 id="item06">Status and next steps for Native Messaging spec</h3>
 
-    <p class="phone"><cite>kmag:</cite> aswan didn't have time to
+    <p class="phone"><b>kmag:</b> aswan didn't have time to
     update the draft yet.</p>
 
-    <p class="phone"><cite>AndersR:</cite> Google has expressed
+    <p class="phone"><b>AndersR:</b> Google has expressed
     non-interest in doing it on mobile, which makes it problematic given their market share.</p>
 
-    <p class="phone"><cite>kmag:</cite> We would like to implement
+    <p class="phone"><b>kmag:</b> We would like to implement
     something similar for android, based on web intents.<br>
     ... We're basically starting from scratch there</p>
 
-    <p class="phone"><cite>mikepie:</cite> We could meet about
+    <p class="phone"><b>mikepie:</b> We could meet about
     that, and and get as many browser vendors for this.<br>
     ... We should make something that works for everybody</p>
 
-    <p class="phone"><cite>kmag:</cite> I would like the android
+    <p class="phone"><b>kmag:</b> I would like the android
     API to be as similar as possible to the desktop one, except for
     how you register.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> How about iOS?</p>
+    <p class="phone"><b>andrey-rybka:</b> How about iOS?</p>
 
-    <p class="phone"><cite>kmag:</cite> iOS is more complicated,
+    <p class="phone"><b>kmag:</b> iOS is more complicated,
     there's only one browser vendor, and everyone else embeds
     webview.</p>
 
-    <p class="phone"><cite>AndersR:</cite> Have you talked to
+    <p class="phone"><b>AndersR:</b> Have you talked to
     apple</p>
 
-    <p class="phone"><cite>Florian:</cite> Yes, but they don't
+    <p class="phone"><b>Florian:</b> Yes, but they don't
     comment.</p>
 
-    <p class="phone"><cite>AndersR:</cite> I talked to the TAG and
+    <p class="phone"><b>AndersR:</b> I talked to the TAG and
     web app sec, but they say they are not interested in native
     messaging because it is not the web.<br>
     ... I think it is relevant, but they're not responsive.<br>
     ... You can already start applications with intents, but then
     you cannot communicate with them.</p>
 
-    <p class="phone"><cite>Erik:</cite> We already know that for
+    <p class="phone"><b>Erik:</b> We already know that for
     payments it's not going to happen.<br>
     ... To get other vendors onboard, we need to get them engaged
     for payments.</p>
 
-    <p class="phone"><cite>AndersR:</cite> There's ApplePay for the
+    <p class="phone"><b>AndersR:</b> There's ApplePay for the
     web, which does some form of communication, sending data back
     and forth, which is what you'd want for this and other
     applications...</p>
 
-    <p class="phone"><cite>Erik:</cite> Nowadays browsers engines
+    <p class="phone"><b>Erik:</b> Nowadays browsers engines
     are getting embedded into things (CEF for instance), and for
     these use cases, native messaging is super important.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Agreed.</p>
+    <p class="phone"><b>mikepie:</b> Agreed.</p>
 
-    <p class="phone"><cite>Florian:</cite> If some other group
+    <p class="phone"><b>Florian:</b> If some other group
     wants to do it for the web platform in general, we should talk
     to them, but we're not the group to do it for the whole
     platform.</p>
 
-    <p class="phone"><cite>Erik:</cite> Payments can be the trojan
+    <p class="phone"><b>Erik:</b> Payments can be the trojan
     horse, it needs this, and people care.</p>
 
-    <p class="phone"><cite>mikepie:</cite> We need to have a
+    <p class="phone"><b>mikepie:</b> We need to have a
     conversation with browser vendors, and a separate conversation
     focused on the payment scenario.</p>
 
-    <p class="phone"><cite>Florian:</cite> Should we make a joint
+    <p class="phone"><b>Florian:</b> Should we make a joint
     statement from browser ext and web payments to the TAG (and
     Web Platform WG?) about the importance of native messaging?</p>
 
-    <p class="phone"><cite>Erik:</cite> Payments absolutely needs
+    <p class="phone"><b>Erik:</b> Payments absolutely needs
     it, there's no other way to pull it off.</p>
 
 <a name="action02" id="action02"></a>
 
-    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <p class="irc">&lt;<b>scribe</b>&gt;
     <strong>ACTION:</strong> Erik and Florian and Mike to work on a
     joint statement about the importance of native messaging
     [recorded in <a href="https://github.com/browserext/native-messaging/issues/6">
@@ -321,7 +321,7 @@ date: 2016-09-22
 
     <h3 id="item07">Unique ID algorithm/scheme (e.g. browserext://&lt;ID_GOES_HERE&gt;)</h3>
 
-    <p class="phone"><cite>mikepie:</cite> There are different ways
+    <p class="phone"><b>mikepie:</b> There are different ways
     to generate that unique ID.<br>
     ... The chrome store will do it for you when you submit an
     extension; also installation generates one if there wasn't one.<br>
@@ -333,32 +333,32 @@ date: 2016-09-22
     ... The browser could refuse to to install a second extension
     with the same id.</p>
 
-    <p class="phone"><cite>kmag:</cite> Firefox uses signing but that doesn't work cross browser well</p>
+    <p class="phone"><b>kmag:</b> Firefox uses signing but that doesn't work cross browser well</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Is the FF approach
+    <p class="phone"><b>andrey-rybka:</b> Is the FF approach
     unique?</p>
 
-    <p class="phone"><cite>mikepie:</cite> No, Edge also. Opera probably as well.<br>
+    <p class="phone"><b>mikepie:</b> No, Edge also. Opera probably as well.<br>
     ... Within the extension code, you don't have to hardcode it, you can get it at runtime.</p>
 
-    <p class="phone"><cite>kmag:</cite> In FF we generate a random
+    <p class="phone"><b>kmag:</b> In FF we generate a random
     id in every sessions, but that doesn't work well for permissions.<br>
     ... Chrome supports native messaging, cross ext messaging, and
     from site to extension, and they do all that based on the ID.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Is that what you
+    <p class="phone"><b>andrey-rybka:</b> Is that what you
     want to do as well?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Yes, but having
+    <p class="phone"><b>mikepie:</b> Yes, but having
     different ids per browser breaks that.<br>
     There's no way to do this without central registration.</p>
 
-    <p class="phone"><cite>Florian:</cite> Maybe decentralized, but
+    <p class="phone"><b>Florian:</b> Maybe decentralized, but
     that's tricky.</p>
 
-    <p class="phone"><cite>mikepie:</cite> You need some kind of singing as well.</p>
+    <p class="phone"><b>mikepie:</b> You need some kind of singing as well.</p>
 
-    <p class="irc">&lt;<cite>Erik</cite>&gt; Something to note
+    <p class="irc">&lt;<b>Erik</b>&gt; Something to note
     about Web Payments. Any implementer of a Web Payment API also
     enters the fraud liability chain. The browser is NOT a secure
     environment for payments initiation. Implementers of a payment
@@ -366,7 +366,7 @@ date: 2016-09-22
 
     <h3 id="item08">Manifest format</h3>
 
-    <p class="phone"><cite>mikepie:</cite> We can have a look at
+    <p class="phone"><b>mikepie:</b> We can have a look at
     the spec.<br>
     ... There are a few things in there that aren't in any
     implementation today.<br>
@@ -374,23 +374,23 @@ date: 2016-09-22
     ... People we supportive of that, to avoid being stuck with v1.<br>
     ... The MS team though it could be called required capabilities instead of required keys.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Sounds reasonable.</p>
+    <p class="phone"><b>andrey-rybka:</b> Sounds reasonable.</p>
 
-    <p class="phone"><cite>Florian:</cite> I think the mechanism is important, but I don't care about the name.</p>
+    <p class="phone"><b>Florian:</b> I think the mechanism is important, but I don't care about the name.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> From a developer point of view,
+    <p class="phone"><b>andrey-rybka:</b> From a developer point of view,
     having standardized manifest is really important and makes things easier.<br>
     ... Right now the portability isn't good.</p>
 
-    <p class="phone"><cite>Erik:</cite> This is also a lock-in problem.</p>
+    <p class="phone"><b>Erik:</b> This is also a lock-in problem.</p>
 
-    <p class="phone"><cite>Florian:</cite> We already have a bit of a draft, we just need to keep refining.</p>
+    <p class="phone"><b>Florian:</b> We already have a bit of a draft, we just need to keep refining.</p>
 
-    <p class="phone"><cite>mikepie:</cite> The way we've done
+    <p class="phone"><b>mikepie:</b> The way we've done
     it, you can have extra keys, and they just get ignored (not
     break everything).</p>
 
-    <p class="irc">&lt;<cite>mikepie</cite>&gt; <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a></p>
+    <p class="irc">&lt;<b>mikepie</b>&gt; <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a></p>
 
     <h3 id="item09">CG Logo</h3>
 
@@ -398,24 +398,24 @@ date: 2016-09-22
 
     <p class="phone"><a href="https://mikepie1.github.io/browserext-1/LogoIdeas.png">https://mikepie1.github.io/browserext-1/LogoIdeas.png</a></p>
 
-    <p class="phone"><cite>Florian:</cite> I like 10.</p>
+    <p class="phone"><b>Florian:</b> I like 10.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> I like 9.</p>
+    <p class="phone"><b>andrey-rybka:</b> I like 9.</p>
 
-    <p class="phone"><cite>Florian:</cite> 9 is good too.</p>
+    <p class="phone"><b>Florian:</b> 9 is good too.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> I like all but 7.</p>
+    <p class="phone"><b>andrey-rybka:</b> I like all but 7.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Not 7 or 8.</p>
+    <p class="phone"><b>mikepie:</b> Not 7 or 8.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Add the X to 10?</p>
+    <p class="phone"><b>andrey-rybka:</b> Add the X to 10?</p>
 
-    <p class="phone"><cite>Erik:</cite> I like 10, with “EXT” in there somehow.</p>
+    <p class="phone"><b>Erik:</b> I like 10, with “EXT” in there somehow.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I'll do another round to try to fit the “EXT” in there.</p>
+    <p class="phone"><b>mikepie:</b> I'll do another round to try to fit the “EXT” in there.</p>
 <a name="action03" id="action03"></a>
 
-    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <p class="irc">&lt;<b>scribe</b>&gt;
     <strong>ACTION:</strong> mike to do a new iteration, centered
     around 10 or 9, with EXT or X somwhere in there [recorded in
     <a href="https://github.com/browserext/browserext.github.io/issues/12#issuecomment-249741948">
@@ -423,11 +423,11 @@ date: 2016-09-22
 
     <h3 id="item10">Status of extended attribute “checkAnyPermissions”</h3>
 
-    <p class="phone"><cite>mikepie:</cite> bzbarsky is here.</p>
+    <p class="phone"><b>mikepie:</b> bzbarsky is here.</p>
 
-    <p class="phone"><cite>kmag:</cite> Yes, but crazy busy.</p>
+    <p class="phone"><b>kmag:</b> Yes, but crazy busy.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Maybe we can catch him during a break.<br>
+    <p class="phone"><b>mikepie:</b> Maybe we can catch him during a break.<br>
     ... I talked to Travis, also a contributor, he'd be happy to chat about this.<br>
     ... There's also Yves.<br>
     ... So we can reach to them today.<br>
@@ -436,65 +436,65 @@ date: 2016-09-22
 
     <h3 id="item11">Testing with WebDriver</h3>
 
-    <p class="phone"><cite>mikepie:</cite> Had a good review with the browser testing and tools group.<br>
+    <p class="phone"><b>mikepie:</b> Had a good review with the browser testing and tools group.<br>
     ... We discussed the extensions to test the extensions; the feedback was positive.<br>
     ... They expect others to do similar extensions.
     ... But as our proposal is strictly additive, they think we should host it ourselves rather than add it to their spec.<br>
     ... I can do that and include it in the browserext spec, section 2.7</p>
 
-    <p class="phone"><cite>Florian:</cite> Sounds good. Later on we
+    <p class="phone"><b>Florian:</b> Sounds good. Later on we
     can split into a new spec if this stabilizes at a different
     speed but this is a good initial host for it at least.</p>
 
-    <p class="phone"><cite>kmag:</cite> We can host most of it
+    <p class="phone"><b>kmag:</b> We can host most of it
     here, but some parts of the mother spec do need changes, so we
     will need to keep talking to them.</p>
 
-    <p class="phone"><cite>AndersR:</cite> Can you test the API without using an actual extension?</p>
+    <p class="phone"><b>AndersR:</b> Can you test the API without using an actual extension?</p>
 
-    <p class="phone"><cite>mikepie:</cite> In Edge, you would need an extension to be loaded for these APIS to be available.</p>
+    <p class="phone"><b>mikepie:</b> In Edge, you would need an extension to be loaded for these APIS to be available.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> If you're doing this server side, you may not have a browser.</p>
+    <p class="phone"><b>andrey-rybka:</b> If you're doing this server side, you may not have a browser.</p>
 
-    <p class="phone"><cite>mikepie:</cite> There are several use
+    <p class="phone"><b>mikepie:</b> There are several use
     cases:<br>
     ... Extension authors want to test their extensions.<br>
     ... Site authors may want to test compat with popular extensions.<br>
     ... Also, browser vendors testing the extensions API themselves.<br>
     ... One more use case is for this group to test for compliance.</p>
 
-    <p class="phone"><cite>Florian:</cite> I think we should have a test suite
+    <p class="phone"><b>Florian:</b> I think we should have a test suite
     for browsers to test compatibility, based on what web platform and other w3c groups
     do successfully.<br>
     Specifically, we want to emulate Web Platform Tests or if possible
     actually become part of WPT.</p>
 
-    <p class="phone"><cite>kmag:</cite> Everything in one test
+    <p class="phone"><b>kmag:</b> Everything in one test
     suite would be good for us.<br>
     ... Our API works by generating extensions on the fly based on
     JSON, and communicating with the test driver.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Does this run
+    <p class="phone"><b>andrey-rybka:</b> Does this run
     headless?</p>
 
-    <p class="phone"><cite>kmag:</cite> This is complicated; mostly we run in VMs or on bare hardware</p>
+    <p class="phone"><b>kmag:</b> This is complicated; mostly we run in VMs or on bare hardware</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> It is very heavy</p>
+    <p class="phone"><b>andrey-rybka:</b> It is very heavy</p>
 
-    <p class="phone"><cite>kmag:</cite> Yes, but necessary.</p>
+    <p class="phone"><b>kmag:</b> Yes, but necessary.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Are you sure?</p>
+    <p class="phone"><b>andrey-rybka:</b> Are you sure?</p>
 
-    <p class="phone"><cite>kmag:</cite> We have tests that don't
+    <p class="phone"><b>kmag:</b> We have tests that don't
     use UI, but there are things you cannot test that way.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> I have a selenium
+    <p class="phone"><b>andrey-rybka:</b> I have a selenium
     grid, but that's horribly slow.</p>
 
-    <p class="phone"><cite>mikepie:</cite> It's fine to look at
+    <p class="phone"><b>mikepie:</b> It's fine to look at
     something for messaging similar to the Chrome test API.</p>
 
-    <p class="irc">&lt;<cite>mikepie</cite>&gt; Having an
+    <p class="irc">&lt;<b>mikepie</b>&gt; Having an
     API way or extensions to interop/signal with test harness is
     good, but we should also support other ways to interop with
     extensions, since commercial extensions won't signal the
@@ -503,62 +503,62 @@ date: 2016-09-22
     <h3 id="item12">Next steps for this CG. Should we form a
     WG?</h3>
 
-    <p class="phone"><cite>Florian:</cite> I think at some point we
+    <p class="phone"><b>Florian:</b> I think at some point we
     should transition the work into a WG, but I don't want to kill
     the momentum with administrative work.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I would also like to
+    <p class="phone"><b>mikepie:</b> I would also like to
     expand a bit more the work we do on the testing and
     implementation side before we make that jump.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Agreed.</p>
+    <p class="phone"><b>andrey-rybka:</b> Agreed.</p>
 
-    <p class="phone"><cite>kmag:</cite> Agreed.</p>
+    <p class="phone"><b>kmag:</b> Agreed.</p>
 
-    <p class="phone"><cite>Florian:</cite> So we'll keep going as a
+    <p class="phone"><b>Florian:</b> So we'll keep going as a
     CG for now.</p>
 
     <h3 id="item13">spec review</h3>
 
-    <p class="irc">&lt;<cite>andrey-rybka</cite>&gt; <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a></p>
+    <p class="irc">&lt;<b>andrey-rybka</b>&gt; <a href="https://browserext.github.io/browserext/">https://browserext.github.io/browserext/</a></p>
 
-    <p class="phone"><cite>mikepie:</cite> I have some editorial
+    <p class="phone"><b>mikepie:</b> I have some editorial
     work to do, but no need to discuss that.<br>
     ... I added 3 use cases, do you feel they are appropriate.</p>
 
-    <p class="phone"><cite>Florian:</cite> the 3rd one seems
+    <p class="phone"><b>Florian:</b> the 3rd one seems
     privacy sensitive, but feels in scope.</p>
 
-    <p class="phone"><cite>mikepie:</cite> yes, but at the same
+    <p class="phone"><b>mikepie:</b> yes, but at the same
     time it is not part of the APIs we have specified so far.</p>
 
-    <p class="phone"><cite>kmag:</cite> Cookies feel like they
+    <p class="phone"><b>kmag:</b> Cookies feel like they
     belong here, bookmarks is more tricky.<br>
     ... For messaging, we need to resolve the id issue.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Should we talk
+    <p class="phone"><b>andrey-rybka:</b> Should we talk
     about native messaging?</p>
 
-    <p class="phone"><cite>kmag:</cite> It is in a separate
+    <p class="phone"><b>kmag:</b> It is in a separate
     spec.</p>
 
-    <p class="phone"><cite>Florian:</cite> section 2.1.1 needs to
+    <p class="phone"><b>Florian:</b> section 2.1.1 needs to
     say what happens when you try some of the non allowed things.</p>
 
-    <p class="phone"><cite>kmag:</cite> We should define this in
+    <p class="phone"><b>kmag:</b> We should define this in
     terms of the default CSP spec, which does say all these
     things.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> I agree.</p>
+    <p class="phone"><b>andrey-rybka:</b> I agree.</p>
 
-    <p class="phone"><cite>kmag:</cite> I think we need a separate
+    <p class="phone"><b>kmag:</b> I think we need a separate
     section to deal with content scripts and how they interact with
     CSP; in Chrome they can inject content to violate CSP.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> How does that
+    <p class="phone"><b>andrey-rybka:</b> How does that
     happen?</p>
 
-    <p class="phone"><cite>kmag:</cite> Content injected by
+    <p class="phone"><b>kmag:</b> Content injected by
     extension content script, such as scripts or images, which
     would violate the page's CSP are accepted by Chrome. The
     exception is things like event listener attributes
@@ -566,75 +566,75 @@ date: 2016-09-22
     extension context is on the stack, and are still subject to
     CSP.</p>
 
-    <p class="phone"><cite>AndersR:</cite> I do not understand the
+    <p class="phone"><b>AndersR:</b> I do not understand the
     4th bullet in 2.1.1</p>
 
-    <p class="phone"><cite>mikepie:</cite> There's sandboxing, and
+    <p class="phone"><b>mikepie:</b> There's sandboxing, and
     content scripts cannot call functions into the page.<br>
     So if I want to modify a onclick ... <br>
     I'll get back to this later when I have a better way to
     explain.</p>
 
-    <p class="phone"><cite>kmag:</cite> I think that should be a
+    <p class="phone"><b>kmag:</b> I think that should be a
     separate section.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Shall we go section
+    <p class="phone"><b>andrey-rybka:</b> Shall we go section
     by section, or issue by issue?</p>
 
-    <p class="phone"><cite>mikepie:</cite> let's go with
+    <p class="phone"><b>mikepie:</b> let's go with
     issues.<br>
     ... We currently don't talk in the spec about
     programmatic/runtime granting of permissions, so this listing of optional permissions is kind of of odd
     here.</p>
 
-    <p class="phone"><cite>kmag:</cite> We should remove it for
+    <p class="phone"><b>kmag:</b> We should remove it for
     now.</p>
 
-    <p class="phone"><cite>Florian:</cite> This is something we can
+    <p class="phone"><b>Florian:</b> This is something we can
     add back later without compat issue, right?</p>
 
-    <p class="phone"><cite>kmag:</cite> Right.</p>
+    <p class="phone"><b>kmag:</b> Right.</p>
 
     <p class="phone"><a href="https://github.com/browserext/browserext/issues/8"><strong class="resolution" id="resolution01">RESOLUTION: drop optional permissions from the
     spec</strong></a></p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Should there be a
+    <p class="phone"><b>andrey-rybka:</b> Should there be a
     read-only attribute EventListener onClicked?</p>
 
-    <p class="phone"><cite>kmag:</cite> I don't understand the
+    <p class="phone"><b>kmag:</b> I don't understand the
     question.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I'll follow up.</p>
+    <p class="phone"><b>mikepie:</b> I'll follow up.</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> What about issue
+    <p class="phone"><b>andrey-rybka:</b> What about issue
     5?</p>
 
-    <p class="phone"><cite>mikepie:</cite> We should be consistent
+    <p class="phone"><b>mikepie:</b> We should be consistent
     about how we name the types and the parameters<br>
     ... I'm going to switch everything to use details.</p>
 
     <p class="phone"><a href="https://github.com/browserext/browserext/issues/9"<strong class="resolution" id="resolution02">RESOLUTION: Change all the naming to use
     details</strong></a></p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> Should we prefix
+    <p class="phone"><b>andrey-rybka:</b> Should we prefix
     all names with Browser or BrowserExt etc?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Currently this is
+    <p class="phone"><b>mikepie:</b> Currently this is
     inconsistent.</p>
 
-    <p class="phone"><cite>kmag:</cite> Yes, we need to prefix
+    <p class="phone"><b>kmag:</b> Yes, we need to prefix
     things, WebIDL stuff shares a namespace.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Should we do
+    <p class="phone"><b>mikepie:</b> Should we do
     BrowserExtBrowserFoo, or just BrowserExtFoo?</p>
 
     <p class="phone"><a href="https://github.com/browserext/browserext/issues/10"><strong class="resolution" id="resolution03">RESOLUTION: prefix all with BrowserExt and the
     object name</strong></a></p>
 
-    <p class="phone"><cite>mikepie:</cite> Do we need the extension
+    <p class="phone"><b>mikepie:</b> Do we need the extension
     object?</p>
 
-    <p class="phone"><cite>kmag:</cite> I think we should keep it
+    <p class="phone"><b>kmag:</b> I think we should keep it
     but note that it is deprecated.<br>
     ... It is still necessary for a few things, but we shouldn't be
     adding to it.<br>
@@ -642,39 +642,39 @@ date: 2016-09-22
     there.<br>
     ... I don't think you need getbackground page.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Not sure.</p>
+    <p class="phone"><b>mikepie:</b> Not sure.</p>
 
-    <p class="phone"><cite>Florian:</cite> Can we decide on the
+    <p class="phone"><b>Florian:</b> Can we decide on the
     high level principle and just let the editor deal with it?</p>
 
-    <p class="phone"><cite>kmag:</cite> I think these are already
+    <p class="phone"><b>kmag:</b> I think these are already
     in runtime, they don't need them.</p>
 
     <p class="phone"><a href="https://github.com/browserext/browserext/issues/11"><strong class="resolution" id="resolution04">RESOLUTION: drop the extension object,
     reintroduce later if needed</strong></a></p>
 
-    <p class="phone"><cite>mikepie:</cite> Issue 11 is a work item
+    <p class="phone"><b>mikepie:</b> Issue 11 is a work item
     for me to go fix the types appropriately.</p>
 
     <h3 id="item14">Native messaging</h3>
 
-    <p class="phone"><cite>Florian:</cite> Mike, Andrey do you want
+    <p class="phone"><b>Florian:</b> Mike, Andrey do you want
     to engage with aswan to help get the ball rolling</p>
 
-    <p class="phone"><cite>mikepie:</cite> yes</p>
+    <p class="phone"><b>mikepie:</b> yes</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> yes</p>
+    <p class="phone"><b>andrey-rybka:</b> yes</p>
 
     <hr>
 
-    <p class="phone"><cite>andrey-rybka:</cite> When should we have the next meeting?<br>
+    <p class="phone"><b>andrey-rybka:</b> When should we have the next meeting?<br>
     ... In two weeks?</p>
 
-    <p class="phone"><cite>mikepie:</cite> On 5th (US)?</p>
+    <p class="phone"><b>mikepie:</b> On 5th (US)?</p>
 
-    <p class="phone"><cite>andrey-rybka:</cite> sure</p>
+    <p class="phone"><b>andrey-rybka:</b> sure</p>
 
-    <p class="phone"><cite>Florian:</cite> works for me<br>
+    <p class="phone"><b>Florian:</b> works for me<br>
     ... Ok, let's do that, same time as usual.</p>
   </div>
 

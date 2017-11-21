@@ -56,143 +56,143 @@ date: 2016-06-09
 
   <div class="meeting">
     
-    <p class="irc">&lt;<cite>Florian</cite>&gt; Scribenick:
+    <p class="irc">&lt;<b>Florian</b>&gt; Scribenick:
     Florian</p>
 
     <h3 id="item01">WebIDL conventions</h3>
 
-    <p class="irc">&lt;<cite>kmag</cite>&gt; <a href="https://gist.github.com/97fa5b3cf4599df92ee5066bde47c162">https://gist.github.com/97fa5b3cf4599df92ee5066bde47c162</a></p>
+    <p class="irc">&lt;<b>kmag</b>&gt; <a href="https://gist.github.com/97fa5b3cf4599df92ee5066bde47c162">https://gist.github.com/97fa5b3cf4599df92ee5066bde47c162</a></p>
 
-    <p class="phone"><cite>kmag:</cite> This link is what I plan to
+    <p class="phone"><b>kmag:</b> This link is what I plan to
     send<br>
     ... there's basicaly to options:<br>
     ... one use the CheckAnyPermissions attribute, and one that
     breaks it down and specifies it in words</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; The IDL looks
+    <p class="irc">&lt;<b>andrey-r</b>&gt; The IDL looks
     good</p>
 
-    <p class="phone"><cite>kmag:</cite> I can walk you through
+    <p class="phone"><b>kmag:</b> I can walk you through
     this</p>
 
-    <p class="phone"><cite>mikepie:</cite> Please do</p>
+    <p class="phone"><b>mikepie:</b> Please do</p>
 
-    <p class="phone"><cite>kmag:</cite> There's a top level
+    <p class="phone"><b>kmag:</b> There's a top level
     interface call ExtensionGlobal<br>
     ... it has one property, "browser"<br>
     ... [... describes the content of the mail pasted above
     ...]</p>
 
-    <p class="phone"><cite>mikepie:</cite> I like this model a
+    <p class="phone"><b>mikepie:</b> I like this model a
     lot<br>
     ... it is a clean way to extend window.<br>
     ... I think it would help if you could expand a bit with examples, to make it easier to understand.</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; I agree a little
+    <p class="irc">&lt;<b>andrey-r</b>&gt; I agree a little
     more details would help for anyone on mailing list</p>
 
-    <p class="phone"><cite>mikepie:</cite> It can work for dynamic
+    <p class="phone"><b>mikepie:</b> It can work for dynamic
     capabilities, added during execution</p>
 
-    <p class="phone"><cite>kmag:</cite> That's the way it is done
+    <p class="phone"><b>kmag:</b> That's the way it is done
     in webapps for the navigator property, saying this must only be
     exposed in certain contexts.</p>
 
-    <p class="phone"><cite>andrey-r:</cite> More details would be
+    <p class="phone"><b>andrey-r:</b> More details would be
     good, or people on the mailing list will have a hard time
     understanding.<br>
     ... but I like the proposal.</p>
 
-    <p class="phone"><cite>Florian:</cite> Where will you send it?
+    <p class="phone"><b>Florian:</b> Where will you send it?
     both lists?</p>
 
-    <p class="phone"><cite>kmag:</cite> I was thinking of the WebIDL mailing list, but I can CC the browserext CG.</p>
+    <p class="phone"><b>kmag:</b> I was thinking of the WebIDL mailing list, but I can CC the browserext CG.</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; Both list would be
+    <p class="irc">&lt;<b>andrey-r</b>&gt; Both list would be
     good</p>
 
-    <p class="phone"><cite>mikepie:</cite> Any thoughts about the
+    <p class="phone"><b>mikepie:</b> Any thoughts about the
     events object?</p>
 
-    <p class="phone"><cite>kmag:</cite> Would have to give a
+    <p class="phone"><b>kmag:</b> Would have to give a
     different name, "tabs" is a terrible name.<br>
     ... Maybe call it broadcaster or dispatcher or something?</p>
 
-    <p class="phone"><cite>mikepie:</cite> If we can move forward
+    <p class="phone"><b>mikepie:</b> If we can move forward
     with this, I can use it to write up the draft,
     but there might be some push back, so don't want to rush into using
     it before we got feedback.</p>
 
-    <p class="phone"><cite>kmag:</cite> The only push back could be
+    <p class="phone"><b>kmag:</b> The only push back could be
     about using attributes that aren't part of the spec</p>
 
     <h3 id="item02">Top level object name and protocol name</h3>
 
-    <p class="phone"><cite>mikepie:</cite> I can go with "browser" or
+    <p class="phone"><b>mikepie:</b> I can go with "browser" or
     "navigator.extension", and prefer "browser", but Opera was
     preferring the other one.</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; I am ok with
+    <p class="irc">&lt;<b>andrey-r</b>&gt; I am ok with
     both</p>
 
-    <p class="phone"><cite>kmag:</cite> for the protocol,
+    <p class="phone"><b>kmag:</b> for the protocol,
     browser-extensions:// feels too long</p>
 
-    <p class="irc">&lt;<cite>mikepie</cite>&gt; How about
+    <p class="irc">&lt;<b>mikepie</b>&gt; How about
     browser-ext:// ?</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; browser-ext:// -
+    <p class="irc">&lt;<b>andrey-r</b>&gt; browser-ext:// -
     Yes</p>
 
-    <p class="phone"><cite>Florian:</cite> is browser:// too short
+    <p class="phone"><b>Florian:</b> is browser:// too short
     for the protocol name?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Microsoft people
+    <p class="phone"><b>mikepie:</b> Microsoft people
     expressed concern about extension:// for being to short / generic.</p>
 
-    <p class="phone"><cite>Florian:</cite> browserext:// ?</p>
+    <p class="phone"><b>Florian:</b> browserext:// ?</p>
 
-    <p class="phone"><cite>kmag:</cite> Happy eitherway</p>
+    <p class="phone"><b>kmag:</b> Happy eitherway</p>
 
-    <p class="phone"><cite>mikepie:</cite> I think browserext:// is
+    <p class="phone"><b>mikepie:</b> I think browserext:// is
     good</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; agree</p>
+    <p class="irc">&lt;<b>andrey-r</b>&gt; agree</p>
 
-    <p class="phone"><cite>Florian:</cite> and just browser for the
+    <p class="phone"><b>Florian:</b> and just browser for the
     object?</p>
 
-    <p class="irc">&lt;<cite>mikepie</cite>&gt; And browser.* for
+    <p class="irc">&lt;<b>mikepie</b>&gt; And browser.* for
     object</p>
 
-    <p class="phone"><cite>Florian:</cite> Opera proposed "nex", do
+    <p class="phone"><b>Florian:</b> Opera proposed "nex", do
     we want to to follow that?</p>
 
-    <p class="phone"><cite>mikepie:</cite> it does make sense, but
+    <p class="phone"><b>mikepie:</b> it does make sense, but
     I prefer what we just said</p>
 
-    <p class="phone"><cite>kmag:</cite> I'd be ok for the top level
+    <p class="phone"><b>kmag:</b> I'd be ok for the top level
     object, not the protocol</p>
 
-    <p class="phone"><cite>Florian:</cite> Seem there's no
+    <p class="phone"><b>Florian:</b> Seem there's no
     objection either way, and most people prefering browser & browserext://. Should we resolve on that?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Want to loop in Shwetank</p>
+    <p class="phone"><b>mikepie:</b> Want to loop in Shwetank</p>
 
-    <p class="phone"><cite>Florian:</cite> Sure. Resolutions during
+    <p class="phone"><b>Florian:</b> Sure. Resolutions during
     meeting are provisional anway.</p>
 
     <p class="phone"><strong class="resolution" id="resolution01"><a href="https://github.com/browserext/browserext/issues/2">RESOLUTION: use "browser" as the top level
 		    object, and browserext:// as the protocol name</a></strong></p>
 
-    <p class="phone"><cite>Florian:</cite> Do we need to register
+    <p class="phone"><b>Florian:</b> Do we need to register
     that protocol?</p>
 
-    <p class="phone"><cite>mikepie:</cite> I can do
+    <p class="phone"><b>mikepie:</b> I can do
     that</p>
 <a name="action01" id="action01"></a>
 
-    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <p class="irc">&lt;<b>scribe</b>&gt;
     <strong>ACTION:</strong> mikepie to register browserext://
     [recorded in <a href="https://github.com/browserext/browserext/issues/3">
     https://github.com/browserext/browserext/issues/3</a></p>
@@ -200,87 +200,87 @@ date: 2016-06-09
     <h3 id="item03">How to identify functions/properties/events
     under the objects we've identified</h3>
 
-    <p class="phone"><cite>mikepie:</cite> How do we do that?
+    <p class="phone"><b>mikepie:</b> How do we do that?
     Should I prepare something for the next meeting?</p>
 
-    <p class="phone"><cite>Florian:</cite> Set it up as a github
+    <p class="phone"><b>Florian:</b> Set it up as a github
     issue, and we discuss there, and take it by phone once it's settled down somewhat?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Sounds good.</p>
+    <p class="phone"><b>mikepie:</b> Sounds good.</p>
 
-    <p class="phone"><cite>Florian:</cite> Once we have that and
+    <p class="phone"><b>Florian:</b> Once we have that and
     the IDL, we can make a spec that looks like one</p>
 
-    <p class="phone"><cite>mikepie:</cite> Yes</p>
+    <p class="phone"><b>mikepie:</b> Yes</p>
 
     <h3 id="item04">TPAC</h3>
 
-    <p class="phone"><cite>Florian:</cite> What do we want to do
+    <p class="phone"><b>Florian:</b> What do we want to do
     there?</p>
 
-    <p class="phone"><cite>andrey-r:</cite> Meet :)</p>
+    <p class="phone"><b>andrey-r:</b> Meet :)</p>
 
-    <p class="phone"><cite>Florian:</cite> I've requested a time
+    <p class="phone"><b>Florian:</b> I've requested a time
     slot, on Thursday IIRC.</p>
 
-    <p class="phone"><cite>mikepie:</cite> First time for CGs to
+    <p class="phone"><b>mikepie:</b> First time for CGs to
     meet at TPAC right?</p>
 
-    <p class="phone"><cite>Florian:</cite> Yes</p>
+    <p class="phone"><b>Florian:</b> Yes</p>
 
-    <p class="phone"><cite>mikepie:</cite> Should we try and have a
+    <p class="phone"><b>mikepie:</b> Should we try and have a
     more complete spec to review?</p>
 
-    <p class="phone"><cite>andrey-r:</cite> Yes, hard to be
+    <p class="phone"><b>andrey-r:</b> Yes, hard to be
     productive otherwise.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Should native messaging
+    <p class="phone"><b>mikepie:</b> Should native messaging
     be together?</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; Native messaging
+    <p class="irc">&lt;<b>andrey-r</b>&gt; Native messaging
     is very important topic</p>
 
-    <p class="phone"><cite>Florian:</cite> We can only book for the
+    <p class="phone"><b>Florian:</b> We can only book for the
     CG, not per topic, so it will have to be together anyway.</p>
 
-    <p class="phone"><cite>andrey-r:</cite> Is this going to be
+    <p class="phone"><b>andrey-r:</b> Is this going to be
     madness again, with stickers on the board?</p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; Sorry</p>
+    <p class="irc">&lt;<b>andrey-r</b>&gt; Sorry</p>
 
-    <p class="phone"><cite>Florian:</cite> Madness is the Wednesday
+    <p class="phone"><b>Florian:</b> Madness is the Wednesday
     "unconference". CG meetings are different, we should get a sane time slot.<br>
     ... I'll follow up</p>
 <a name="action02" id="action02"></a>
 
-    <p class="irc">&lt;<cite>scribe</cite>&gt;
+    <p class="irc">&lt;<b>scribe</b>&gt;
     <strong>ACTION:</strong> florian to check if we got the time
     slot requested [recorded in <a href="https://github.com/browserext/browserext.github.io/issues/8">
     https://github.com/browserext/browserext.github.io/issues/8</a></p>
 
-    <p class="irc">&lt;<cite>andrey-r</cite>&gt; I was saying that
+    <p class="irc">&lt;<b>andrey-r</b>&gt; I was saying that
     I would prefer to meet as early as possible, but if thursday is
     best for most that's fine</p>
 
-    <p class="phone"><cite>Florian:</cite> Houdini shows that you
+    <p class="phone"><b>Florian:</b> Houdini shows that you
     can have productive meetings for high level discussions, but in
     our case having concrete things to discuss would indeed be
     better, so let's try to have a draft spec.</p>
 
     <h3 id="item05">next meeting</h3>
 
-    <p class="phone"><cite>Florian:</cite> It would be good to have
+    <p class="phone"><b>Florian:</b> It would be good to have
     topics ahead of time, please file github issues or ML
     threads.</p>
 
-    <p class="phone"><cite>mikepie:</cite> When do we meet next</p>
+    <p class="phone"><b>mikepie:</b> When do we meet next</p>
 
-    <p class="phone"><cite>andrey-r:</cite> Anytime!</p>
+    <p class="phone"><b>andrey-r:</b> Anytime!</p>
 
-    <p class="phone"><cite>Florian:</cite> Not next week, but
+    <p class="phone"><b>Florian:</b> Not next week, but
     anytime is generally OK.</p>
 
-    <p class="phone"><cite>mikepie:</cite> June 29, same time?</p>
+    <p class="phone"><b>mikepie:</b> June 29, same time?</p>
 
     <p class="phone"><strong class="resolution" id="resolution02"><a href="https://github.com/browserext/browserext.github.io/issues/9">RESOLUTION: next meeting June 29, same time</a></strong></p>
   </div>

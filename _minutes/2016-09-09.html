@@ -58,202 +58,202 @@ date: 2016-09-09
     
     <h3 id="item01">Agenda</h3>
 
-    <p class="phone"><cite>Florian:</cite> Any other item you would
+    <p class="phone"><b>Florian:</b> Any other item you would
     like to add to the agenda?</p>
 
-    <p class="phone"><cite>mikepie:</cite> nope</p>
+    <p class="phone"><b>mikepie:</b> nope</p>
 
     <h3 id="item02">TPAC</h3>
 
     <p class="phone"><a href="https://github.com/browserext/browserext.github.io/wiki/2016-TPAC-Agenda">
     https://github.com/browserext/browserext.github.io/wiki/2016-TPAC-Agenda</a></p>
 
-    <p class="phone"><cite>Florian:</cite> This is a wikipage to
+    <p class="phone"><b>Florian:</b> This is a wikipage to
     prepare for TPAC;<br>
     ... please add topics you want to discuss, and your name if you
     plan to attend.<br>
     ... It should be publicly writteable</p>
 
-    <p class="phone"><cite>mikepie:</cite> Looks editable to me.</p>
+    <p class="phone"><b>mikepie:</b> Looks editable to me.</p>
 
     <h3 id="item03">Liaison with Testing and Tools
     WG/WebDriver</h3>
 
-    <p class="phone"><cite>mikepie:</cite> I will be able to attend
+    <p class="phone"><b>mikepie:</b> I will be able to attend
     the testing sessions on Monday / Tuesday as an observer.<br>
     ... John Jansen from MS will there and able to represent
     us.<br>
     ... We'll request that this topic be added when the chairs make
     a call for the agenda.</p>
 
-    <p class="phone"><cite>Florian:</cite> This hasn't been brought
+    <p class="phone"><b>Florian:</b> This hasn't been brought
     to that group yet, has it?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Only as a side comment
+    <p class="phone"><b>mikepie:</b> Only as a side comment
     maybe.<br>
     ... I'll check if the link I have is the latest version, and
     then add to our own agenda as well.</p>
 
-    <p class="phone"><cite>Florian:</cite> So we wait for feedback
+    <p class="phone"><b>Florian:</b> So we wait for feedback
     from that group before there is anything more to discuss here,
     right?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Right.</p>
+    <p class="phone"><b>mikepie:</b> Right.</p>
 
     <h3 id="item04"><a href="https://github.com/browserext/browserext/pull/4">https://github.com/browserext/browserext/pull/4</a></h3>
 
-    <p class="phone"><cite>Florian:</cite> I've done a light
+    <p class="phone"><b>Florian:</b> I've done a light
     review. I think it can be merged before my comments are
     addressed and then we track them individually, but if you want
     to fix them before, that's great too.</p>
 
-    <p class="phone"><cite>kmag:</cite> I'll review and send comments today.</p>
+    <p class="phone"><b>kmag:</b> I'll review and send comments today.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I try to follow the
+    <p class="phone"><b>mikepie:</b> I try to follow the
     proposal around the web IDL, looking for feedback on that.<br>
     ... There a huge hole: the callback functions aren't defined
     yet.</p>
 
-    <p class="phone"><cite>kmag:</cite> Might be a good topic for
+    <p class="phone"><b>kmag:</b> Might be a good topic for
     TPAC.</p>
 
-    <p class="phone"><cite>Florian:</cite> kmag, do you want
+    <p class="phone"><b>Florian:</b> kmag, do you want
     merge-then-comment, or comment-fix-then-merge?</p>
 
-    <p class="phone"><cite>kmag:</cite> I'd like to comment
+    <p class="phone"><b>kmag:</b> I'd like to comment
     first.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Do we really need the
+    <p class="phone"><b>mikepie:</b> Do we really need the
     extension object?<br>
     ... Much of the APIs there that aren't yet deprecated in Chrome are
     duplicated elsewhere.<br>
     ... I think getURL is the only thing left.</p>
 
-    <p class="phone"><cite>kmag:</cite> I think Chrome is moving to
+    <p class="phone"><b>kmag:</b> I think Chrome is moving to
     deprecate, but getURL is the big chunk that's left and hard to
     remove.</p>
 
-    <p class="phone"><cite>mikepie:</cite> For now I think we can
+    <p class="phone"><b>mikepie:</b> For now I think we can
     leave it in, but we'll need to come back to it.</p>
 
-    <p class="phone"><cite>Florian:</cite> We can spec AND
+    <p class="phone"><b>Florian:</b> We can spec AND
     depreacate, if this isn't the way forward, but is still
     something UAs need for compat reasons.</p>
 
-    <p class="phone"><cite>kmag:</cite> We try not to support
+    <p class="phone"><b>kmag:</b> We try not to support
     deprecated stuff.<br>
     ... I don't think we need getBackgroundPage and the like. These
     are the kind of things we may come back to, but don't need in
     the first spec.</p>
 
-    <p class="phone"><cite>Florian:</cite> Do you want to go
+    <p class="phone"><b>Florian:</b> Do you want to go
     through the comments I've made in <a href="https://github.com/browserext/browserext/pull/4#issuecomment-245791954">
     https://github.com/browserext/browserext/pull/4#issuecomment-245791954</a></p>
 
-    <p class="phone"><cite>mikepie:</cite> sure<br>
+    <p class="phone"><b>mikepie:</b> sure<br>
     ... Comment 1 about titles: I started with something like what
     you suggested, but changed cause it felt long. Happy to change
     back.</p>
 
-    <p class="phone"><cite>Florian:</cite> Please do, would be
+    <p class="phone"><b>Florian:</b> Please do, would be
     easier to understand.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Comment 2: I think this
+    <p class="phone"><b>mikepie:</b> Comment 2: I think this
     is normative, and I'll add details about what happens if you try
     disallowed things anyway.</p>
 
-    <p class="phone"><cite>kmag:</cite> We should define that as a
+    <p class="phone"><b>kmag:</b> We should define that as a
     CSP ruleset, rather than prose.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I'll look at that.</p>
+    <p class="phone"><b>mikepie:</b> I'll look at that.</p>
 
-    <p class="phone"><cite>Florian:</cite> Comment 3: you say two
+    <p class="phone"><b>Florian:</b> Comment 3: you say two
     things cannot be set at the same time. What happens if you try?</p>
 
-    <p class="phone"><cite>kmag:</cite> That's browser specific, we
+    <p class="phone"><b>kmag:</b> That's browser specific, we
     support both at the same time.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I think Chrome and Edge
+    <p class="phone"><b>mikepie:</b> I think Chrome and Edge
     reject the manifest if you have both<br>
     ... I'll make sure the language is clear</p>
 
-    <p class="phone"><cite>Florian:</cite> Since Chrome and Edge
+    <p class="phone"><b>Florian:</b> Since Chrome and Edge
     differ from Mozilla, does one side plan to align with the
     other?</p>
 
-    <p class="phone"><cite>kmag:</cite>We'd rather not change.</p>
+    <p class="phone"><b>kmag:</b>We'd rather not change.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I'll put some language
+    <p class="phone"><b>mikepie:</b> I'll put some language
     around that.</p>
 
-    <p class="phone"><cite>Florian:</cite> Yes, please spec it one
+    <p class="phone"><b>Florian:</b> Yes, please spec it one
     way, and add an issue about not all browsers doing it that way at the
     moment.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Comment 4:
+    <p class="phone"><b>mikepie:</b> Comment 4:
     CheckAnyPermissions is defined in MDN, what do we do about
     that?</p>
 
-    <p class="phone"><cite>kmag:</cite> Should be in the IDL spec
+    <p class="phone"><b>kmag:</b> Should be in the IDL spec
     eventually, link to MDN for now is fine.</p>
 
-    <p class="phone"><cite>Florian:</cite> Agreed. Put an inline
+    <p class="phone"><b>Florian:</b> Agreed. Put an inline
     issue to remind ourselves to have a normative source
     eventually.<br>
     ... Comments 5 and 6 are about the IDL-explaining examples. I
     liked having one, wasn't sure why there was two.</p>
 
-    <p class="phone"><cite>mikepie:</cite> The second one got a
+    <p class="phone"><b>mikepie:</b> The second one got a
     value pulled from the manifest, and in the permissions, there's
     an array.</p>
 
-    <p class="phone"><cite>Florian:</cite> Can't we just keep the
+    <p class="phone"><b>Florian:</b> Can't we just keep the
     second example, and it covers everything?</p>
 
-    <p class="phone"><cite>mikepie:</cite> Can do that.<br>
+    <p class="phone"><b>mikepie:</b> Can do that.<br>
     ... I've heard that this kind of example wasn't necessary / w3c
     like, so I can remove.</p>
 
-    <p class="phone"><cite>Florian:</cite> There are different
+    <p class="phone"><b>Florian:</b> There are different
     styles in writing specs. Some prefer to-the-point specs, with
     as little fluff as necessary, other prefer making them more
     readable and self explanatory to novices.<br>
     ... Do as you prefer. I prefer having examples and
     explanations.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I just noticed I messed
+    <p class="phone"><b>mikepie:</b> I just noticed I messed
     up the section numbering. Will fix.<br>
     ... In the IDL, I've used optional in several places, but I
     don't think that's permitted.</p>
 
-    <p class="phone"><cite>kmag:</cite> The IDL way to that is to
+    <p class="phone"><b>kmag:</b> The IDL way to that is to
     add a question mark.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Will do that</p>
+    <p class="phone"><b>mikepie:</b> Will do that</p>
 
     <h3 id="item05">Status update on <a href="https://browserext.github.io/native-messaging/">https://browserext.github.io/native-messaging/</a>
 </h3>
 
-    <p class="phone"><cite>kmag:</cite> I haven't been involved
+    <p class="phone"><b>kmag:</b> I haven't been involved
     with the spec much. Hoped Andrew would be there, but he isn't.
     Happy to talk about the open issues.</p>
 
-    <p class="phone"><cite>Florian:</cite> Issue list: <a href="https://github.com/browserext/native-messaging/issues">https://github.com/browserext/native-messaging/issues</a></p>
+    <p class="phone"><b>Florian:</b> Issue list: <a href="https://github.com/browserext/native-messaging/issues">https://github.com/browserext/native-messaging/issues</a></p>
 
-    <p class="phone"><cite>kmag:</cite> I think all these issues
+    <p class="phone"><b>kmag:</b> I think all these issues
     belong together, and they seem to pertain mostly to web
     payments. It is not clear yet to me how they are related to
     what we're doing.</p>
 
     <p class="phone"><a href="https://github.com/browserext/native-messaging/issues/1">https://github.com/browserext/native-messaging/issues/1</a></p>
 
-    <p class="phone"><cite>Florian:</cite> It seems to me that what
+    <p class="phone"><b>Florian:</b> It seems to me that what
     is proposed is a different API for a specific use case, not a
     generic solution. Maybe the specialized API is better for that
     use case, but I don't see how it addresses the generic
     concern.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I think it is more a
+    <p class="phone"><b>mikepie:</b> I think it is more a
     question about mobile.</p>
 
     <p class="phone"><strong class="resolution" id="resolution01"><a href="https://github.com/browserext/native-messaging/issues/1#issuecomment-245807421">RESOLUTION: Close issue 1 as wontfix, because
@@ -262,7 +262,7 @@ date: 2016-09-09
 
     <p class="phone"><a href="https://github.com/browserext/native-messaging/issues/2">https://github.com/browserext/native-messaging/issues/2</a></p>
 
-    <p class="phone"><cite>kmag:</cite> This is a proposal to allow
+    <p class="phone"><b>kmag:</b> This is a proposal to allow
     native messagine to web pages, not just extensions.<br>
     ... Doesn't seem related to extensions, and the security
     aspects seem underspecified.</p>
@@ -271,11 +271,11 @@ date: 2016-09-09
 
     <p class="phone"><a href="https://github.com/browserext/native-messaging/issues/3">https://github.com/browserext/native-messaging/issues/3</a></p>
 
-    <p class="phone"><cite>kmag:</cite> This is a follow up to
+    <p class="phone"><b>kmag:</b> This is a follow up to
     number 2.<br>
     ... Not relevant in the context of extensions.</p>
 
-    <p class="phone"><cite>mikepie:</cite> I agree. Issue 4 seems to
+    <p class="phone"><b>mikepie:</b> I agree. Issue 4 seems to
     be the same. I don't see how it relates to extensions.</p>
 
     <p class="phone"><strong class="resolution" id="resolution03">RESOLUTION: <a href="https://github.com/browserext/native-messaging/issues/3#issuecomment-245802980"close issue 3</a> and <a href="https://github.com/browserext/native-messaging/issues/4#issuecomment-245803497"> issue 4</a>, out of scope for
@@ -283,30 +283,30 @@ date: 2016-09-09
 
     <p class="phone"><a href="https://github.com/browserext/native-messaging/issues/5">https://github.com/browserext/native-messaging/issues/5</a></p>
 
-    <p class="phone"><cite>kmag:</cite> Not sure this is needed as
+    <p class="phone"><b>kmag:</b> Not sure this is needed as
     a special parameter. Such information can be communicated
     later.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Doing it this way
+    <p class="phone"><b>mikepie:</b> Doing it this way
     constrains the format, later it can be anything.</p>
 
-    <p class="phone"><cite>kmag:</cite> This may be about command
+    <p class="phone"><b>kmag:</b> This may be about command
     line parameters.<br>
     ... Doesn't seem necessary, you can do that with a message.</p>
 
-    <p class="phone"><cite>mikepie:</cite> Initialization can send
+    <p class="phone"><b>mikepie:</b> Initialization can send
     any data it wants, in any format it wants, so this isn't
     necessary.</p>
 
     <p class="phone"><strong class="resolution" id="resolution04"><a href="https://github.com/browserext/native-messaging/issues/5#issuecomment-245801773">RESOLUTION: Close as wontfix, this can be achieved with existing communication mechanisms</a></strong></p>
 
-    <p class="phone"><cite>Florian:</cite> kmag, when do you think
+    <p class="phone"><b>Florian:</b> kmag, when do you think
     aswan can have a draft for the messaging spec?</p>
 
-    <p class="phone"><cite>kmag:</cite> I'll check with him. Will
+    <p class="phone"><b>kmag:</b> I'll check with him. Will
     let you know if we cannot have it before TPAC.</p>
 
-    <p class="phone"><cite>Florian:</cite> That's the end of the
+    <p class="phone"><b>Florian:</b> That's the end of the
     agenda. We're adjourned. See you at TPAC.</p>
   </div>
 
