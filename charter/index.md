@@ -8,6 +8,8 @@ This charter:
 Feedback about this document:
 : [Github issues](https://github.com/browserext/browserext.github.io/issues)
 
+{% include warning.html %}
+
 ## Goal
 
 This Community Group provides a lightweight venue to facilitate discussion
